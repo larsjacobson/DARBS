@@ -1,0 +1,24 @@
+<rule name="Finish melody constraint">
+    <precondition>
+        <request type="get">
+            <partition name="melodyControl">
+                <pattern>
+                    Melody constraint started on note ?note
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="replace">
+            <partition name="melodyControl">
+                <pattern>
+                    Melody constraint started on note ~note
+                </pattern>
+                <pattern>
+                    Melody constraint complete on note ~note
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

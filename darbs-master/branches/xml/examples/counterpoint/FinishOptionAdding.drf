@@ -1,0 +1,24 @@
+<rule name="Finish option adding">
+    <precondition>
+        <request type="get">
+            <partition name="optionControl">
+                <pattern>
+                    Option adding started on note ?note
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="replace">
+            <partition name="optionControl">
+                <pattern>
+                    Option adding started on note ~note
+                </pattern>
+                <pattern>
+                    Option adding complete on note ~note
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

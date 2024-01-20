@@ -1,0 +1,32 @@
+<agent type="procedural" fireable="true">
+    <precondition type="not">
+        <request type="present">
+            <partition name="control">
+                <pattern>
+                    Square is fired
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="run" library="libsquare.dylib" function="square" variable="result">
+            <pattern>2.34</pattern>
+        </request>
+
+        <request type="report">
+            <pattern>
+                The square of 2.34 is ~result
+            </pattern>
+        </request>
+
+        <request type="add">
+            <partition name="control">
+                <pattern>
+                    Square is fired
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</agent>
+

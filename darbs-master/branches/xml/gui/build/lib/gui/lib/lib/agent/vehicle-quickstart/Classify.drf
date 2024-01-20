@@ -1,0 +1,40 @@
+<rule name="Classify">
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="wheels">
+                    <pattern>
+                        Vehicle ?id has ?wheels wheels
+                    </pattern>
+                </partition>
+                <partition name="weight">
+                    <pattern>
+                        Vehicle == is ?weight weight
+                    </pattern>
+                </partition>
+                <partition name="carrier">
+                    <pattern>
+                        Vehicle == is a ?carrier carrier
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="get">
+                <partition name="definitions">
+                    <pattern>
+                        A ?vehicleType has ~wheels wheels, is ~weight weight, and is a ~carrier carrier
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="report">
+            <pattern>
+                Vehicle ~id is a ~vehicleType
+            </pattern>
+        </request>
+    </action>
+</rule>

@@ -1,0 +1,66 @@
+<rule name="Check decidability">
+    <precondition>
+        <!-- Check whether the first rule has run -->
+        <precondition>
+            <request type="get">
+                <partition name="harmonyControl">
+                    <pattern>
+                        Harmony constraint complete on note ?index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check whether the second rule has run -->
+        <precondition>
+            <request type="present">
+                <partition name="noteControl">
+                    <pattern>
+                        Note constraint complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check whether the third rule can run, and if it has run -->
+        <precondition type="or">
+            <precondition>
+                <request type="compare" operator="==">
+                    <pattern>
+                        ~index
+                    </pattern>
+                    <pattern>
+                        1
+                    </pattern>
+                </request>
+            </precondition>
+            <precondition>
+                <request type="present">
+                    <partition name="melodyControl">
+                        <pattern>
+                            Melody constraint complete on note ~index
+                        </pattern>
+                    </partition>
+                </request>
+            </precondition>
+        </precondition>
+        <!-- Make sure we haven't already got to this point-->
+        <precondition type="not">
+            <request type="present">
+                <partition name="determinatorControl">
+                    <pattern>
+                        Can decide for note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="determinatorControl">
+                <pattern>
+                    Can decide for note ~index
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

@@ -1,0 +1,23 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<p class="text-center" *ngIf="agents.length <= 0 && !loading">No agents for sale!</p>
+<div class="agents-list" *ngIf="agents.length >= 0">
+    <a class="" routerLink="/biome/:id/new-agent" routerLinkActive="active" style="text-decoration: none">
+      <h1 class="clicktext">Add Agent</h1>
+    </a>
+  <div class="agent-box">
+  <div class="agent-pane"
+       *ngFor="let agent of agents"
+       [ngClass]="{'open': agent._id === chosenId}"
+       [ngStyle]="{'background-image': 'url(' + agent.imageUrl + ');background-size:  30% 100%;'}"
+       (click)="onProductClicked(agent._id)">
+       <h3 style="padding-left: 25%">
+         {{ agent.title }}
+       </h3>
+       <div class="agent-info">
+         <h5>
+           {{ agent?.description }}
+         </h5>
+       </div>
+  </div>
+
+</div>

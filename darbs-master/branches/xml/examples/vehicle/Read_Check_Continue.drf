@@ -1,0 +1,59 @@
+<rule name="Read Check Continue">
+    <precondition>
+        <request type="get">
+            <partition name="control">
+                <pattern>
+                    Continue = y
+                </pattern>
+                <pattern>
+                    Vehicle Classification is fired
+                </pattern>
+            </partition>
+            <partition name="count">
+                <pattern>
+                    counter is ?count
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+
+    <action>
+		<request type="delete">
+            <partition name="control">
+                <pattern>
+                    Continue = y
+                </pattern>
+                <pattern>
+                    Vehicle Classification is fired
+                </pattern>
+            </partition>
+            <partition name="count">
+                <pattern>
+    		        counter is ~count
+                </pattern>
+            </partition>
+		</request>
+
+        <!-- Increment the variable -->
+        <request type="run" library="libdarbsutil.dylib" function="addInteger" variable="newCount">
+            <pattern>
+                ~count 1
+            </pattern>
+        </request>
+
+        <request type="add">
+            <partition name="count">
+		        <pattern>
+                    counter is ~newCount
+                </pattern>
+            </partition>
+        </request>
+
+        <request type="report">
+            <pattern>
+                Read Check Continue fired because Continue = y
+            </pattern>
+        </request>
+    </action>
+</rule>

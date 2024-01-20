@@ -1,0 +1,49 @@
+<rule name="Vehicle Lorry">
+    <precondition>
+        <request type="get">
+            <partition name="control">
+                <pattern>
+                    Vehicle Classification is fired
+                </pattern>
+            </partition>
+            <partition name="count">
+                <pattern>
+                    counter is ?count
+                </pattern>
+            </partition>
+        </request>
+        <request type="present">
+            <partition name="wheels">
+                <pattern>
+                    Vehicle ~count has 8 wheels
+                </pattern>
+            </partition>
+            <partition name="weights">
+                <pattern>
+                    Vehicle ~count is heavy weight
+                </pattern>
+            </partition>
+            <partition name="carriers">
+                <pattern>
+                    Vehicle ~count is a goods carrier
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="vehicle">
+                <pattern>
+                    Vehicle ~count is a lorry
+                </pattern>
+            </partition>
+        </request>
+
+        <request type="report">
+            <pattern>
+                Vehicle lorry fired because vehicle ~count has 8 wheels, is heavy weight and a goods carrier
+            </pattern>
+        </request>
+    </action>
+</rule>

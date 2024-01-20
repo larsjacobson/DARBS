@@ -1,0 +1,8 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "darbs-master\\trunk\\out\\build\\x64-Debug",
+      "darbs-master\\trunk\\out\\install\\x64-Debug"
+    ]
+  }
+}

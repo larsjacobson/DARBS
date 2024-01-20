@@ -1,0 +1,70 @@
+<rule name="Analyse harmonic intervals">
+    <precondition>
+        <!-- Get the option -->
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ?cfValue
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check that we haven't already analysed this note -->
+        <precondition type="not">
+            <request type="present">
+                <partition name="harmonyControl">
+                    <pattern>
+                        Harmony analysis complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="add">
+                <partition name="harmonyControl">
+                    <pattern> 
+                        Harmony analysis started on note ~index
+                    </pattern>
+                </partition>  
+            </request> 
+        </precondition>
+        <precondition>
+            <request type="get">
+                <partition name="options">
+                    <pattern>
+                        Note ~index option ?optionIndex is ?value
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Calculate the distance between the two notes -->
+        <precondition>
+            <request type="run" library="libdarbsutil" function="calculateInteger" variable="noteDistance">
+                <pattern>
+                    ~value - ~cfValue
+                </pattern>
+            </request>
+        </precondition>
+        <!-- Get the name of the interval -->
+        <precondition>
+            <request type="get">
+                <partition name="typesOfInterval">
+                    <pattern>
+                        Note distance of ~noteDistance is a ??intervalType
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="intervals">
+                <pattern>
+                    Note ~index option ~optionIndex is a ~intervalType
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

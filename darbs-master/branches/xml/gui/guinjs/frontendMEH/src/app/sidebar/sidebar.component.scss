@@ -1,0 +1,119 @@
+.sidebar {
+  width: 20%;
+  height: 60%;
+  background: white;
+	display: inline-block;
+	border-radius: 30px;
+  float: left;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+#first {
+  width: 100%;
+  height: 80%;
+  background: white;
+  display: inline-block;
+  border-radius: 30px;
+}
+#second{
+  width: 100%;
+  height: 30%;
+  background: #008FFF;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.usernav{
+	color: grey;
+	font-size: 20px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.usernavlist {
+  list-style-type: none;
+	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+}
+
+.usernavalign{
+  margin: 10px;
+	text-align: left;
+}
+
+.usernavicon{
+	position: relative;
+	top: -2px;
+  right: 5px;
+    display: inline-block;
+}
+
+.dot {
+	height: 48%;
+  width: 20%;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 10%;
+  margin-left: 8%;
+}
+.userheadicon{
+	display: block;
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-top:-6px;
+	width: 120%;
+}
+
+.username{
+	font-size: x-large;
+	display: inline-block;
+	position: relative;
+  margin-top:8px;
+	bottom: 30px;
+	left: 10px;
+  top:-16px;
+}
+
+@media only screen and (max-width: 800px){
+
+  #first {
+    display: none;
+  }
+
+  #second{
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .usernav{
+    display: none;
+  }
+
+  .usernavlist {
+    display: none;
+  }
+
+  .usernavalign{
+    display: none;
+  }
+
+  .usernavicon{
+    display: none;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  .userheadicon{
+    display: none;
+  }
+
+  .username{
+    display: none;
+  }
+}

@@ -1,0 +1,78 @@
+.biomes-grid {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.biomes-list{
+  position: absolute;
+  display: inline-block;
+  top: 10%;
+  left: 24%;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  width: 70%;
+}
+
+.biome-pane {
+  img {
+    max-width:18%;
+    vertical-align: top;
+  }
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  width: 97%;
+  height: 40%;
+  margin-bottom: 2%;
+//  margin: 20px;
+  margin-left: 1.5%;
+  background-size: 25% 100%;
+  background-position: left;
+  box-shadow: 1px 1px 3px #333333;
+  cursor: pointer;
+  h1{
+    //padding-top:25%;
+  }
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+.biome-pane {
+  img {
+    vertical-align: top;
+  }
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  width: 97%;
+  height: 100%;
+}
+
+.biome-info {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  background-color: rgba(100, 100, 250, 0.1);
+  color: white;
+  padding: 3%;
+  h2 {
+    padding-left: 8%;
+    color: #5555ff;
+  }
+}
+
+
+@media only screen and (max-width: 512px){
+  .biomes-list{
+    width: 80%;
+    height: 1000%;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+  }
+  img{
+    max-width:20%;
+  }
+}

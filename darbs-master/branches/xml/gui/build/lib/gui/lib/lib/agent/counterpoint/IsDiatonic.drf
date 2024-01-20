@@ -1,0 +1,58 @@
+<rule name="Check whether interval is diatonic">
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="add">
+                <partition name="noteControl">
+                    <pattern>
+                        Note constraint started on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="get">
+                <partition name="options">
+                    <pattern>
+                        Note ~index option ?optionIndex is ?note
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="run" library="libdarbsutil"
+                     function="calculateInteger" variable="modNote">
+                <pattern>
+                    ~note % 12
+                </pattern>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="diatonicNotes">
+                    <pattern>
+                        ~modNote
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="delete">
+            <partition name="options">
+                <pattern>
+                    Note ~index option ~optionIndex ==
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

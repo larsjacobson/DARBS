@@ -1,0 +1,118 @@
+<rule name="Analyse melodic intervals">
+    <precondition>
+        <precondition>
+            <!-- Get the index -->
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check we haven't already been here -->
+        <precondition type="not">
+            <request type="present">
+                <partition name="melodyControl">
+                    <pattern>
+                        Melody analysis complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Get the previous note's index -->
+        <precondition>
+            <request type="run" library="libdarbsutil" function="calculateInteger" variable="previousIndex">
+                <pattern>
+                    ~index - 1
+                </pattern>
+            </request>
+        </precondition>
+        <!-- Get the previous note -->
+        <precondition>
+            <request type="get">
+                <partition name="counterpoint">
+                    <pattern>
+                        Counterpoint note ~previousIndex is ?previousValue
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Should analyse the melody for this note -->
+        <precondition>
+            <request type="add">
+                <partition name="melodyControl">
+                    <pattern>
+                        Melody analysis started on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Get the option -->
+        <precondition>
+            <request type="get">
+                <partition name="options">
+                    <pattern>
+                        Note ~index option ?optionIndex is ?value
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check that we haven't already classified the option -->
+        <precondition type="not">
+            <request type="present">
+                <partition name="movement">
+                    <pattern>
+                        Note ~index option ~optionIndex moves by a ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Calculate the distance between the two notes -->
+        <precondition>
+            <request type="run" library="libdarbsutil" function="calculateInteger" variable="noteDistance">
+                <pattern>
+                    ~previousValue - ~value
+                </pattern>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="run" library="libdarbsutil" function="calculateInteger" variable="negativeNoteDistance">
+                <pattern>
+                    ~noteDistance * -1
+                </pattern>
+            </request>
+        </precondition>
+        <!-- Get the name of the interval -->
+        <precondition type="or">
+            <precondition>
+                <request type="get">
+                    <partition name="typesOfInterval">
+                        <pattern>
+                            Note distance of ~noteDistance is a ??intervalType
+                        </pattern>
+                    </partition>
+                </request>
+            </precondition>
+            <precondition>
+                <request type="get">
+                    <partition name="typesOfInterval">
+                        <pattern>
+                            Note distance of ~negativeNoteDistance is a ??intervalType
+                        </pattern>
+                    </partition>
+                </request>
+            </precondition>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="movement">
+                <pattern>
+                    Note ~index option ~optionIndex moves by a ~intervalType
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

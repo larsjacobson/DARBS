@@ -1,0 +1,51 @@
+<header>
+  <p class="header-title">
+    Launch DARBS
+  </p>
+  <ul class="header-navigation">
+    <li class="header-navigation-item" *ngIf="isAuth">
+      <a class="header-link" routerLink="/all-biomes" routerLinkActive="active">Biomes</a>
+    </li>
+    <li class="header-navigation-item" *ngIf="isAuth">
+      <a class="header-link" routerLink="/new-biome" routerLinkActive="active">Admin</a>
+    </li>
+    <li class="header-navigation-item" *ngIf="isAuth">
+      <input class="header-searchbar" type="text" placeholder="Search..">
+    </li>
+    <li class="header-navigation-item" *ngIf="!isAuth">
+      <a class="header-link" routerLink="/auth/login" routerLinkActive="active">LogIn</a>
+    </li>
+    <li class="header-navigation-item" *ngIf="!isAuth">
+      <a class="header-link" routerLink="/auth/signup" routerLinkActive="active">SignUp</a>
+    </li>
+  </ul>
+
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <ul>
+        <li class="header-navigation-item" *ngIf="isAuth">
+          <a class="header-link" routerLink="/all-biomes" routerLinkActive="active">Biomes</a>
+        </li>
+        <li class="header-navigation-item" *ngIf="isAuth">
+          <a class="header-link" routerLink="/new-biome" routerLinkActive="active">Admin</a>
+        </li>
+        <li class="header-navigation-item" *ngIf="isAuth">
+          <a class="header-link" style="cursor: pointer" (click)="onLogout()">LogOut</a>
+        </li>
+        <li class="header-navigation-item" *ngIf="!isAuth">
+          <a class="header-link" routerLink="/auth/login" routerLinkActive="active">LogIn</a>
+        </li>
+        <li class="header-navigation-item" *ngIf="!isAuth">
+          <a class="header-link" routerLink="/auth/signup" routerLinkActive="active">SignUp</a>
+        </li>
+      </ul>
+    </div>
+    <input class="header-searchbar" type="text" placeholder="Search.." *ngIf="isAuth">
+  </div>
+
+</header>
+
+<div class="page-grid" style="display:inline">
+  <app-sidebar *ngIf="isAuth"></app-sidebar>
+</div>

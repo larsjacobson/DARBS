@@ -1,0 +1,59 @@
+<rule name="AddData">
+    <precondition type="not">
+        <request type="present">
+            <partition name="control">
+                Data has been added
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="definitions">
+                <pattern>
+                    A car has 4 wheels, is medium weight, and is a passenger carrier
+                </pattern>
+                <pattern>
+                    A bicycle has 2 wheels, is light weight, and is a passenger carrier
+                </pattern>
+                <pattern>
+                    A lorry has 8 wheels, is heavy weight, and is a goods carrier
+                </pattern>
+            </partition>
+
+
+            <partition name="wheels">
+                <pattern>
+                    Vehicle A has 2 wheels
+                </pattern>
+                <pattern>
+                    Vehicle B has 4 wheels
+                </pattern> 
+            </partition>
+            
+            <partition name="weight">
+                <pattern>
+                    Vehicle A is light weight
+                </pattern>
+                <pattern>
+                    Vehicle B is medium weight
+                </pattern>
+            </partition>
+
+            <partition name="carrier">
+                <pattern>
+                    Vehicle A is a passenger carrier       
+                </pattern>
+                <pattern>
+                    Vehicle B is a passenger carrier
+                </pattern>
+            </partition>
+
+            <partition name="control">
+                <pattern>
+                    Data has been added
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

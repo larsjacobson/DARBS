@@ -1,0 +1,23 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div *ngIf="!loading" class="col-sm-6 offset-sm-3 mt-2 main">
+  <div class="biomebarshort">
+    <h1>Alter the agent</h1>
+  </div>
+  <form [formGroup]="agentForm">
+    <div class="form-group">
+      <label for="title">Id</label>
+      <input type="text" placeholder="Briefly name your agent" id="title" formControlName="title" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea name="description"
+                id="description"
+                cols="30" rows="7"
+                class="form-control agenttextbox"
+                formControlName="description"
+                placeholder="What does the agent? Add python/c++ code here..."></textarea>
+    </div>
+    <button class="btn btn-primary" (click)="onSubmit()" [disabled]="agentForm.invalid">Submit Agent</button>
+    <p class="alert-danger" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </form>
+</div>

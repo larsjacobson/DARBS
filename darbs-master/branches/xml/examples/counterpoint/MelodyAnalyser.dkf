@@ -1,0 +1,58 @@
+<!--
+Melody Analyser - Analyses the melodic movement of the counterpoint
+-->
+<agent name="Melody Analyser" type="rule-based">
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="present">
+                <partition name="optionControl">
+                    <pattern>
+                        Option adding complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="melodyControl">
+                    <pattern>
+                        Melody analysis complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="run" library="libdarbsutil"
+                          function="calculateInteger" variable="previousIndex">
+                <pattern>
+                    ~index - 1
+                </pattern>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="present">
+                <partition name="counterpoint">
+                    <pattern>
+                        Counterpoint note ~previousIndex ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <rule>
+        AnalyseMelody.drf
+    </rule>
+    <rule>
+        FinishMelodyAnalysis.drf
+    </rule>
+</agent>

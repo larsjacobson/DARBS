@@ -1,0 +1,83 @@
+<rule name="Read Data">
+    <precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="control">
+                    <pattern>
+                        Read no more vehicle data
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <request type="get">
+            <partition name="control">
+                <pattern>
+                    Vehicle Classification is fired
+                </pattern>
+            </partition>
+            <partition name="count">
+                <pattern>
+                    counter is ?count
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+    
+	<action>
+        <request type="run" library="libdarbsutil.dylib" function="getInput" variable="wheels">
+            <pattern>
+                How many wheels does the vehicle have?
+            </pattern>
+        </request>
+
+        <request type="run" library="libdarbsutil.dylib" function="getInput" variable="weight">
+            <pattern>
+                How heavy is the vehicle? (light/medium/heavy)
+            </pattern>
+        </request>
+
+        <request type="run" library="libdarbsutil.dylib" function="getInput" variable="vehicleType">
+            <pattern>
+                Is it a passenger or a goods vehicle? (passenger/goods)
+            </pattern>
+        </request>
+
+        <request type="run" library="libdarbsutil.dylib" function="getInput" variable="continue">
+            <pattern>
+                Add more vehicles? (y/n)
+            </pattern>
+        </request> 
+        
+        <request type="add">
+            <partition name="wheels">
+                <pattern>
+                    Vehicle ~count has ~wheels wheels
+                </pattern>
+            </partition>
+
+            <partition name="weights">
+                <pattern>
+                    Vehicle ~count is ~weight weight
+                </pattern>
+            </partition>
+
+            <partition name="carriers">
+                <pattern>
+                    Vehicle ~count is a ~vehicleType carrier
+                </pattern>
+            </partition>
+
+            <partition name="control">
+                <pattern>
+                    Continue = ~continue
+                </pattern>
+            </partition>
+        </request>
+
+        <request type="report">
+            <pattern>
+                Read Data fired because more data is needed
+            </pattern>
+        </request>
+    </action>
+</rule>

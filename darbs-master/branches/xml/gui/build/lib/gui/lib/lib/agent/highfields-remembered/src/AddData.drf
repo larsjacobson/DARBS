@@ -1,0 +1,403 @@
+<rule name="AddData">
+    <precondition type="not">
+        <request type="present">
+            <partition name="control">
+                Data has been added
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="recollections">
+                <pattern>
+                     Mr Acheson, can you tell me how you came to be in the Highfields?
+
+Both my wife and I, before we married, belonged to International Tramping Tours which organised trips abroad to frontier areas where there had been wars and arguments, and we both decided separately to go to the Pyrenees, Andorra, and that's where we met. I actually went there with a girlfriend. I have to say with a little trace of shame, that I dumped my girlfriend and got together with Margaret! That was in the August and we were married in December 1938. Then there was the question of looking for accommodation, a flat if we could. Leicester was very poorly supplied with flats just then, but just round the corner from where she lived in Connaught Street, she found a downstairs flat in Seymour Street which is at the back of the Collegiate School. We lived at number 13 which we always considered our lucky number because we met on the 13th August.
+
+We think it had been occupied by a lady of easy virtue because all areas around railway stations tend to be red light districts, and although people say now that Highfields has gone downhill, it had been going downhill for a hundred years. My father-in-law came over from Lincolnshire to help my wife to clean up the flat.
+
+The bath was in the kitchen but it was separate from upstairs because the staircase had been divided. The front room that we had as a lounge was also our bedroom with a put-you-up. Then there was a middle room, there was also what we would call a living room/dining room and then the kitchen/bathroom combined with an outside loo, as was common in Leicester for health reasons and there is still some argument that it was a good idea at the time.
+
+So we moved in there, or Margaret moved in there, about March time. I was working in London and had to find a job to bring me to Leicester. If you remember, 1938 was the year of Munich and trade was very bad. I was a commercial traveller and I managed to get a job with Romeo the duplicator people who had an office just at the beginning of Granby Street there in the YMCA building. I moved up at Easter, April time 1939. So that's where we lived until I was called up in July 1940 and Margaret went on living in the flat. She had a friend from Long Whatton who shared it in Leicestershire, and then, to cut a long story short, when I came back from the war in July 1945, we got together. I was demobbed in January 1946. But as my wife was a teacher and got the long school holidays, I had to go on working normally just getting two weeks holiday a year which was always a bone of contention between us. Teachers never seemed to do any work you see! But she convinced me that I should swap and go in for teaching. So from March 1946 until April 1947 I was away in Worcestershire at Shenstone Emergency Training Centre. I refused to go to their camp school in Staffordshire, a place called Rugeley, I thought that after so long away from my wife, that to be in Staffordshire teaching for the Leicester City Council was not good enough. So during our first nine years of married life we only had approximately eighteen months together! I was put into a school in Friar Lane called St Martin's Church School and we lived in Seymour Street quite happily, at least I did!
+
+I was very active in Wycliffe Ward Labour Party. We had some terrific struggles there, losing and winning council elections and that sort of thing. I met all sorts of people in Highfields because as you know, the St George's area and the Highfields' area being near to the railway, there were a lot of railway workers there who could walk to work on the early shifts in a very short time so we stayed there until 1953, when we moved up to Knighton.
+
+Tell me more about the Labour Party in Highfields,just after the war. Was there a good deal of popular support at the time?
+
+Well, if you remember the 1945 selection was a landslide. The great hero of the war, Churchill, in effect, was rejected. I had refused a commission. In my naive way when the Colonel asked me if I would go forward for training for a commission, I am astonished now, I said, "Sir, I wish to earn my commission on the field of battle." I mean how naive can you get? So I was in the other ranks. In the army, and I say this with real conviction, it was a 'class' army – it was 'them and us'. That really was one of the reasons why the overwhelming bulk of the other ranks and the armed services voted for Labour, with their programme of nationalisation and the taking of profit making concerns into public ownership.
+
+So when I came back, I dived into Labour Party work. I covered the Wycliffe Ward which covered the St George's area and some of Highfields up to Spinney Hill. It was a tiny Ward. During the war, the Labour Party had had the political truce, so there was no organisation. Most of the men were either working hard on munitions or things like that. In the army the membership card of the Labour Party in Wycliffe was between thirty and forty and there were only perhaps half a dozen of us who attended meetings.
+
+I came in full of energy and wishing to change th we built up the Wycliffe Ward to the second biggest Ward in the city, not just in South Leicester but in the city. In those days, the Labour Party subscription was six shillings a year, we went round every month collecting sixpence a month and entering it on the card. We kept in touch with the grass roots. Now,ralised at Walworth Road. Many people now have a bank account sn the local people are tending to lose touch with the grass rooduring the Atlee regime, there was still a struggle between thend the parliamentary grass roots leftwing, known perhaps as the" or the "Bevan Knights". I found in politics, if you characterctive 'ite', that is hostile, but if it is 'ist', then it is fa is something worth remembering. We fought very hard in Wyclifftwing Ward and in those days. Leicester was peculiar in that itstituency parties. We had divisional parties and the main partyresolutions to the headquarters was the City Party. That was reade unions sent dozens of delegates there, and at the Annual Gegs of that Delegate Party, that City Party would be up to two hmmittees hadn't the power. We operated in Wycliffe and had a Wamittee as well as the Members' meeting. We got up to a membershn those days, there was somebody who was the sort of chief powerank Nolan, the councillor was Councillor Hall, who lived up Kirley Road way but he was not a very political person. I think hce Agent and when it came to 1949, because he had been elected ions after the war, he was defeated. Already the tide was runnity and in that election, I think, I'm not sure, we either lost of councillors. So we were a very active party which only goes ll the organisation in the world can only minimise that change.gain. I could give you the dates if I looked them up. We got Jothe technical college as it was then, on the building staff. Heon after that we elected Len Hurst.
+
+Now Len Hurst lived in Upp. He had been in the Royal Navy as a regular. I was honoured tofought very hard but the difficulty with him was that there wasnded a committee meeting during the day, but that was no good tregular basis, ten shillings didn't compensate for the loss of is wife Margaret supported him and she is still alive. His son Secular Society. Len decided to oppose the Labour group raisingsed this. So in the council chamber, he moved that they reject bour group knew that the Tories would vote for raising the coun think he even got a seconder for his motion to reject the raiscalled it a vindictive, mechanical way they withdrew the whip ft that when the next council elections came for him to fight heafter a year or so he decided to resign from the Labour Party a we organised a network of leftwingers in Leicester and met to y and how to get motions through the city council. There is a lin this that has not been recorded, unfortunately Ward Labour Pords. Some may send them to the Leicester Record Office but mosof people who dump them into the dustbin. So unfortunately, if on't record their knowledge it will be lost forever, and I haveugh they have sometimes been good to me, in publishing news or  true history of the working class in Leicester. So if people a the history of Leicester by just looking through the Mercury tt get a very good all round picture.
+
+Was there ever a Labour nwe had a Mercury journalist called Dick Clements. He decided tor. He supported that. I had gone to Yugoslavia in about 1954 wi and they published an article about Yugoslavia in that. Dick oarles Keene was the autocratic leader. What he said went. Even  councillor like Mark Henig always gave way to Charles Keene and we fought them over that. We said that to implement party policy, whether it was Tory or Labour, you had to have the party members sharing the committees. But another big fight, and I can say this although it's blowing my own trumpet, I was one of thnsive education.
+
+Now in those days we called it multilateral eN.U.T. I was very active, I went as a delegate to a national corence but we fought very hard on that and I will make no apolog began to support the idea of comprehensive education, in other leadership followed suit so then their members supported it. I.U.T. in support of comprehensive education. We very soon got ie like Brian Simon at the University and George Freeland, who hbecome a head and various other people like Tom Adams who was n would, some would call, a fellow traveller but anyway he was i time he was the Chairman of South Leicester Labour Party. So an comprehensive education. Now that is a saga in itself. We werted because Charlie Keene was opposed. His idea was, that he anworking class had been able to become what is now called, sociy the privilege of a grammar school education. He said "Why destroy what is good for something that we are not certain about?" What he said went and the chairman of the Education Committee us statement that "We would get comprehensive education over hid body". And perhaps, not saying it in a joking manner, within onths he was dead.
+
+Oh dear!
+
+We fought hard and we began to ge it took a long time on the Education Committee in the council finally, we had, Councillor Peachy. He worked in the Post Offiche became chairman of the Education Committee. He and Helena Ror of an East London borough, came up here and very soon became They both asked me to brief them and they practically used my ants. Because I was well known in the Labour Party and I was a t also in the National Association of Labour Teachers, they used then the General Election came and the Tories came in and thatation authority, at least I am repeating what my wife and her fols into infant or primary, senior and to do that with the leass and juniors in the downstairs, and the girls upstairs and thearate schools. They thought that in playgrounds the girls wouldjuniors than the boys! So to get this reorganisation, Leicestere comprehensive you had to have integrated schools and that wasoblem. So Brian Simon, George Freeland, myself, Jack Brooks andw up a plan which showed how, although they might be separated  hundred yards, we could still have, like up in the Johnny Nortter Boys' School that could become comprehensive, we showed in arious areas that that could be done. So again, to cut a long sarlie Keene found that he couldn't head it off any longer, so that wonderful ploy of deciding to have a pioneer, or pilot scheols had been built and one of them was Beaumont Leys, and they  that comprehensive. They appointed a former Grammar School Heaut of the area, that should have been a warning signal. I was a School and when Len Hurst visited that school I told him aboutitions there. St Martins was built in 1789, there was no hot wastaff and boys, there was also no hall. There was no playing armall yard at the back, it was decided to close it down and I waould be consulted as to where we went. So I naturally applied ffield Lane. The Head and I were very good friends and our wives He told me that the staffing inspector for secondary schools wman. He was really in the wrong job, and I was told that he rej't serious about comprehensive education. So I was sent to Wycliffe School. I don't like to rake all these things up. They sent me there with no consultation, I arrived the week before term started and the Head said to me, "I want no trouble in my school." So I knew he had been told that I was a dissident that I was a trouble maker. So I simply went round to Leicestershire Cod applied and got a job there. Very inconvenient as I had no car and I was put on the staff at Burbage near Hinckley which meant catching the 7.25am train from London Road to get there in time, then a mile walk from the station to the school.
+
+There wee who were involved in all this and who kept me with one foot on the ground, my head in the clouds. People like Norman Start whose father and grandfather had been active in the Labour movemhe Labour leadership, when it came to promotion, as you know the managers and governors of schools are often appointed by poli, the word went out that people like Jack Johnson should not geNow Jack Johnson became Deputy Head at the same school as my wife and that was Bridge Road School. He had been at Lancaster Boys and had been very active in comprehensive education. We fougsing as it may seem, we opposed German rearmament whilst at the same time supporting disarmament of the other countries, and yet people like Barnett Janner, whose race had suffered so severely under the Germans, that he should have followed the Labour ernment was surprising.
+
+In those days the Tribune ran Brains Trusts which went all round the country, and in our naive way we in a Tribune Brains Trust at the Secular Hall, that's in HumbePs on that Brains Trust and Barney created a row over this that he had not been informed and consulted about other MPs coming into his constituency, so that was another bone of contention.
+hen South Leicester was split into South East and South West, hsier South West and he became, under Guitskill, the Chief Whip. that his constituency and the city were passing motions that wLabour leadership, meant that in the end they decided to bring of Leicester. They decided who was going to be the axe wielder, turned out to be Harold Wilson! In my life I have met three orthere is a look about their eyes. I would say they had snake eyimes before crossing swords with them and Harold Wilson, the fi him personally had those same eyes so I knew that he was a dan Leicester had all Labour MP's, we had a Labour majority wherea time, and I think they had only two Labour MPs. So he came up es. Charlie Woods was a rightwinger he was a transport house ma annual conference our representative, Bill Whitlock, who was athat we had no say in opposing this. So that meant that insteadat were right wing, so this meant that it eased the embarrassmeship there were other fights as well.
+
+There were many politicaaway, they found they had to leave Leicester as I had to in theery school I applied for in Leicester. I was asked for by an asunders simply said he was going to see the Director of Educationson Smith offer me a job that didn't exist. So when I knew thew of this proportion that drove me into the county, and I foundh Stuart Mason had all the credit for this two tier comprehensiniversity. That was where he and Brian Simon worked together.
+
+was active in Leicestershire and I joined the Hinckley N.U.T. Irnment and the fact that the tide was turning, that people likeised the information that when you took the percentage of pupilmined what percentage of that 20% actually got reasonable 'O' ln the percentage dropped below 15%. The drop-outs were phenomen the girls and the boys were in separate schools anyway. So in  You see we organised Labour Party trips to one of the earliestrehensive schools which was Kidbrook in London and then we went to another comprehensive school. So we had visited comprehensid then in the N.U.T., we were very active in trying to see what way of organising by age groups. From primary to secondary, shoff age be 10 or 21, should there be middle schools or sixth fo feeding information to councillors in the city council to enabfactory way of not having huge schools like they had in London,d, because small is beautiful and if kids were going to identifdentify then small numbers in class are also important but smalols, where there is a feeling of unity, are also important and at more sites would be available for smaller schools. Of coursethe advantage of plenty of open space and Stuart Mason used elet you weren't down in the hollow, but you had views so that is ther fights in the Labour Party, mainly on the question of Nucl Disarmament. Once again, blowing my own trumpet, I am probablyurvivor of those who attended the first meeting in the Edward Wondon Road, which I think is now the Noble Building. Where the olishment of nuclear tests met, I think it was organised by thee Quakers, I was a member then and I was then living up in Knig fought long and hard in the Labour Party, and in the main we b disarmament, and this again embarrassed the Healey factor in tty. So all told, Leicester was nearly always on the left and Wy been one of the leads in that.
+
+I kept in touch with events wh 1953, but from 1947 when I came back from college I tramped thard and Spinney, (we helped in Spinney Hill Ward). There was a , where it had been going downhill before the war because of thery respectable working class in Highfields. I can only remembeamily living in the Wycliffe Ward area at that time and there wpulation and there were quite a number of Tory owner occupiers Hurst and Johnny Gale. I can't think of any others later.
+
+Was ds?
+
+The Irish Community? Yes, I've been active in the Irish Mo railways made him a Socialist. He never opposed the 1916 rebel towards support for an independent united Ireland. Ian Paisleynd Anna Ryan were very active in the Labour Party in Wycliffe. to the mining industry. The only house they could get was on Constitution Hill is tucked in down almost below the level of theitution Hill they had built a pair of semi-detached cottages, oand that is where Martin and Anna had to bring up their two chir on, once he had been working regularly in the coal mines at Ddon Road, so I knew of them. And then another very active persoour Party was a weird, outstanding, eccentric, dedicated Labouris McCarthy. He was outstanding. He helped to build up the membip and they lived in Lincoln Street in a flat at the top. He wabviously with a name like Dennis McCarthy.
+
+I knew other Irish  Bomber Thompson who was a Hyde Park orator. In the early days e official Sinn Fein as against the Provisional because they were Marxist Socialist wing where as the Provisional were more naand rural. We very soon realised our mistake. Much later on, thate Sixties, I met another Irish member of the South Leicester rks for the city council. He was a Republican like me.
+
+Do you erent from that period after the war when you were living thereyou go back today, and what changes do you especially notice?
+
+ become peeled off and all sorts of figures emerge. There is a  of talk recently about St Mark's Church and the famous Canon Dere was another outstanding Cleric or Parson. He was the Pastorat the Wycliffe Church, that was Seyward Bedows, an outstandinglthough I am a Secularist I went to some of his Sermons. He gavound him was a whole group of leftwing Labour Party people, peo even won over my sister-in-law to the Labour cause. There is oeicester that mentions she was a teacher at Friar Lane, at the lled Maria Sage. She recalled walking up the London Road to theat the roadside.
+
+Thomas Quick's revolutionary boot manufacturiards. They were all shopkeepers and tradesmen and professionals. I think the Chief Constable at one time lived in Seymour Stretreet, the basement was wonderfully dry and cool and we could kree houses away, the conduit was completely destroyed and they happened to be staying in their kitchen which wasn't demolished. This disrupted all the piped streams so that our basement after that was always damp and wet so you can imagine.
+
+I know in e of the streets that I'm trying to think it of, Melbourne Road, there was a Lieutenant Colonel from the First World War who lived there, along with quite a lot of professional people in Seven Street. Quite a lot of people were what you might call lower middle class. In my day, when I first came to Leicester, Wates then, was notorious as a 'pick up' place you see. Some of thetreet there were quite good. I mean New Walk was still lovely. s lived in the New Walk . Yes, it had become respectable round uit Street you see. There was a chemists there, and we did our f course, all of those houses were badly shaken up in the war t had been called up in the Pay Corps and Leicester was considered a safe city. The headquarters of the Pay Corps or one of the headquarters was centred in Leicester , one was in Granby Stre I think was down Narborough Road. Many people of the Pay Corps were in Boarding houses and in the Saxby and Highfields Street, and he was amongst them so he would call round quite often.
+
+n the bombing took place in Leicester, they went down into the nt, and of course the bombing disrupted the gas mains and the wgot drowned or gassed. The Pay Corps lost quite a number of men Of course, in the Leicester Pay Corps there was the famous impersonator of Field Marshall Montgomery, Clifford James.
+
+So theorps suffered very badly in Highfields, and of course, there weses had been demolished along with the Methodist . My wife was eased when she retired. She was a member of the Labour Party alh she was not very active. She helped in the elections, but the Party nominated her as a manager of the Highfields Junior Schol. She worked with a Miss Sin, an unusual name Sin was. My wifes absolutely anti-racist, she supported the integration of the ion there. She was made a Governor which she really really enjo at the Collegiate School in the last years of its existence. She was probably the only pupil of that period who ever became anor of that school.
+                </pattern>
+                <pattern>
+I was born in Bangladesh. I came from Bangladesh in 1972, from a place called Lumil. I come from a very big family with 5 brothers and 2 sisters. My dad used to live in Birmingham, and that's where we first lived in 1972. We lived there for one year, and then we moved to Leicester because all my uncles were settled there, and we were feeling lonely in Birmingham. When we came to Leicester, we rented a property in Highfields, and my uncles' families were living in the same area. It felt much better living in Highfields because we knew a lot of family and friends as well. Soon, after a couple of months, we had bought a property on Sutherland Street and have been living there ever since.
+
+The first house that we rented in Highfields was a 3 bedroom terrace house. It had two living rooms and a small kitchen and shower/toilet downstairs – it didn't have a bathroom or a bath tub. The property that we bought soon after had 3 bedrooms and an extension downstairs with a bathroom and toilet as well. And, it was much better than the one we rented.
+
+Before my brothers got married, we lived in the same house for at least 7 or 8 years. I was going to school then. I used to go to Moat Girls' School. After my brothers got married they moved away and bought their own properties. I ended up buying this property for myself. I still live there with my family – my 3 children, my husband and my mother-in-law.
+
+The school I went to was very different from my school in Bangladesh – it was a girls' school, I only knew one other girl there – I didn't understand English much, so I felt very isolated. I didn't enjoy school for at least the first year. I used to get a lot of extra support from the language help teachers there, to help me learn English quicker. By the time I was in the year 4 and year 5, I really enjoyed school and joined in all the subjects, I understood English better as well.
+
+When my CSE results came, I realised I hadn't got very good results, and it could be mainly because my English wasn't at a very good standard then. So I went to a 6th form college in Beaumont Leys. We used to catch a bus from Highfields with a couple of my friends. We re-sat our CSEs to get a better grade. After we got that, I went into Melton Mowbray College and applied there to do a secretarial course. I luckily got on the course and did very well in the first year with the shorthand typing, and I carried on, completing my 2 years with the secretarial course. After I finished, I did some voluntary work at Thorn Lighting and also at a school doing shorthand typing. It was nice and I enjoyed it, but I got married soon after and then went off to Germany.
+
+Was it an arranged marriage?
+
+It was an arranged marriage, yes. I went to live in Frankfurt, Germany, but I only stayed there about 7 months. I felt very lonely there and didn't know many people, only my husband and a few of his friends. So after 7 months I came back, and brought my husband over, and we settled down here.
+
+Did your parents arrange the marriage?
+
+Yes, my mum did. My father died in 1976, so it was my mum and my older brothers.
+
+It was nice to come back to Leicester and to Highfields because it felt like home again. At first, when I went away, I thought it would exciting and different. But once you go away you really do miss it. It's just something about Highfields I suppose, because I've been brought up here since I was about 10 or 11, and have been here a long time, what with our relatives living in the same area. Although some of the cousins have moved out of the area, they don't live very far away, still, they come back.
+
+This house I've been living in now, it's been years and years, but I don't feel like selling it, you know. I know we've got it up for sale at the moment because I need a bigger property, but I'm still thinking I'm going to miss it a lot.
+
+Did you mind having an arranged marriage?
+
+In our custom we have to have an arranged marriage. I just know I had to have an arranged marriage. Although it was arranged, it had to be somebody I would like. Nobody would say, "It's got to be so and so and you've to marry him. " So I had a lot of proposals, but I wanted to go to college and do some courses, so my family let me do that. I think I was 20 when I got married. It was through my choice, but it was a strictly like an arranged marriage. It was through my choice, and my family accepted who I chose. As long as they were Bengali and Moslem.
+
+When we first came to live in Highfields, there weren't many shops – there were only few shops on St Stephens Road. There weren't many Halal butchers, and as I can remember I don't think there was a Bengali shop at all then. And I think that within the community, people used to bring Bengali fish and vegetables from another town, and they'd stick it in their van, or get it for us in bulk, or if the restaurant suppliers got their own we used to get it through them. But it wasn't as easy as it is now – like, there are two shops, and you couldn't find the same fish that you do now – the variety of fish is now on a par with the vegetables, ycouldn't get all of the vegetables that you do now.
+
+When you go back to Bangladesh for a holiday, sometimes – even if it's the season, it's difficult to get certain vegetables and fish. And in here, when you think, it's so easy there, you just go and get what you need, so it does feel a lot like home because I suppose everything that you miss in Bangladesh you can have here. You just miss the old relatives who you've left behind, I miss my sister because she's the only on
+
+There weren't many Asian clothes shops at the beginning. Th would be only to the shops. We used to mainly buy materials a some. But now it's different. There's so much you can get becing you need, you know? Clothes, eg. saries, punjabi suits – there were a few sari shops in the beginning, when we first came here but there aren't as many now.
+
+When we first came to Highfields, it was very, very quiet. The area felt (compared to now) safer. There weren't any burglaries – you could leave youu went to the shops, you know. And, playing out – I remember e when I was 12, with my brothers, playing badminton outside â you know. And playing ball, football and things, it was muchuldn't even allow my children to go outside, because I just donymore. I don't know what it is, but I think it's too much viol many muggings going around. And I don't want to label this arey in Highfields, because I think it's everywhere else.
+
+Whateve in Highfields, it gets highlighted quickly. I've enjoyed living in Highfields, with the ups and downs and everything. I know  it's everywhere else, you know? And although there is violenceyou've been living here – I think we just are that extra bit t burgled every few minutes these days and we just have to be t we get window locks in and you've got your door secure. But  gone more violent over the years. It could be to do with the ing else to do. Or there's just too many gangsters around. Ours out and everything. Now, it's clean, but people come and dum(I don't know where they come from) bring rubbish and you get n it and there was many times I had to call the fire brigade tofrightening. That has made me feel that I'm not safe anymore. Iple of doors from me in my neighbour's back alleyway. They didnes." You know, if it's a big fire we call the Fire Brigade, but who it is, and I'm sure it's children, living in the area or not too far away. Maybe not living in our street, but maybe round the area. Because when the children come out of the mosque, you get so much noise and everything, and I don't know who they are at all, but it's been happening for the last two years. It's gone down a bit because the police did come down once or twice.
+
+Are the police quite helpful?
+
+Generally. I'm not comparing to what it was like then, because we never had to call them much then, and I suppose there wasn't as much violence as there i now. But, I don't know – they are helpful to a certain degree. I had to phone up on behalf of somebody else who was so scared, (she lives on her own just two doors from me), and they took their time coming. It could be they're busy with something else, I'm not criticising that, but I'm just saying maybe we need more policemen. Like, if there's a burglary or something and we phone, I wish they could come quicker. Even to take the statements down, you know? I do see more policemen in our area, so tmust be patrolling something or another.
+
+Something else recently changed my street tremendously. It was about three years agouse was being sold, and there was a new family that came in and a private 'blues' club. I didn't know what it was until two yeves opposite said, "Oh, did you know the police raided the housnd that." And I thought, "God, is this in my street?" I wouldn' hadn"t heard it from her. So that made me think twice about moving, you know? It just makes me feel I have to guard my childr the time. They go to school, and luckily I work in a safe schol, the children don't have to cross many roads.
+
+I've got three children, 2 girls and 1 boy, my younger daughter just started school recently. The older two walk themselves to school but I llow them with my younger one, so I feel they are quite safe whhool time. But they sometimes want to play out and unless I canem, I won't let them play. Only last summer, there was a play aea on St Stephens Road. Years back, you could go in there and play with the young children, but nowadays you can't because there's other children mugging each other! I don't know if it's parents not disciplining their children, but they're just so rude and they think if they can see a young child there they can abuse her, they can shout at her and do anything. I have been thelittle girl and seen other boys of about 9 or 10, (she was only, what 8) and they would be picking on her. There was one little girl there and they made her cry. Even if you stick your necn't abuse you. But it didn't stop me trying to help her because the poor girl was on her own. So it's things like that makes  do your children go to?
+
+They go to Medway Primary, it used toor, but we've recently been amalgamated to a primary school now. They attend there because it's the local catchment area for myself. I work there as well. I work as a Home-School Liaison Ofpart-time) under section 11, and I work along with the Bengalith the language – any problems they have, we try to make the can help their children at home to do better at school. It's part-time, you know, I do enjoy it because I've got young children that's why I stuck to a part-time job. But I will be looking for something full-time in the future. As my younger daughter has gone into school as well now.
+
+What's the local authority like?
+
+Help-wise I know there wasn't much then, but somebody who was educated and who knew the system would help you apply for grants or whatever you needed. But now I know there's so many local advice centres I think it's really brilliant. There's a lot of centres, like cultural centres, Bengali education project, Sharma Women's Centre. There's other projects as well and ons. I think it's very good and it's made life easier for our cd you go to a Mosque when you were younger?
+
+I went to the Mos a Sutherland Mosque at the end. I went there, and I used to g Mosque. Also, I went to a supplementary school then, it was rurothers, older brothers, community people then. After a couple ave been 8-10 years, they had applied for a grant through Coun you know, to support the teachers because they used to teach t we still used to run it the same as we do now. And it's rea it now, running better because my children, if he wasn't so g children wouldn't be learning so much. I mean there's so much older daughter who's 11, she knows how to read Bengali and wri in her mother tongue, thanks to the supplementary school.
+
+The, and I remember we used to really get excited. I used to love  everyone else used to moan, "Ooh, it's cold!" But nowadays I thas become much milder. You know, we get the cold winter, but io and a half years old, I went to a playgroup in Berners Streeally like it there. I used to get isolated at home, being a fiher people with same-age children and enjoyed going there threemes a week every morning. Through going there I used to do someme a sessional playworker. It was lovely, because, we had all cre, Asian people, West Indian people, Afro-Caribbean and Bengalchildren, and you could mix with everybody – it seemed more lt separating because of culture or anything. We used to do love cook, do international cooking and we used to try different relly enjoy it, and even though I've left now, I think they stille I worked there I really have enjoyed it, very much. Mainly, mw, being in a crche there. And I gained a lot of experience w do?
+
+My husband used to work in Germany. He used to work for tng cars there. But, he's not been very lucky in England, becauss been doing some skills in hosiery, doing jeans, bar-tacking a work, and that's what he does. You know? But he does get fed ulways permanent, because it depends on the workload, and when t lot of offers of jobs, but when there's not much work he's outssed. And that's when he thinks of going back to Germany for a d you find a job, but in Germany it's very difficult to find plcommodation wise it's very hard, and I didn't think we could fo there. He's still here you know, doing hosiery work, but he'py because the work's not that good.
+
+We walked to school, walk Road with a friend of mine, and then we used to go down East PGirls' School, but sometimes we used to come back through the Sk. In those days I remember we used to go as a family to the pa know why but we don't do a lot now as a family, but I take my go down. But definitely, there weren't many cars before, and th, and you could go out, you know, on your own more.
+
+Carnival âbut within the last 10 years I've been and I've taken part incarnival twice, when I used to work for the Berners Street Famientre there, they have a carnival float and a troop every year.member taking part there with my children on the float, and we to be very dull in the beginning when we came I must say, it di up and go to our family house, but....
+
+What sort of food did  and we used to cook Korma and meat curry. We would make Biriyaishes, Rasgullah, and Firni which is quite famous. But I think mainly because there weren't a lot of our people here, it was o our uncles then. But now, because my cousins and my brothers h we feel we've got a bigger community. You know, so like, when it comes to Eid now, it really feels like Eid.
+
+The children choose what they're going to buy for Eid, we choose what we're goou're waiting for the phone call you know, to confirm when Eid is, it feels like Eid.
+
+I came across a Pakistani parent, a lovely woman who's only been here three years and she said, "I don" I think it's got a lot to do with your family and your friends and what you make of it. In the olden days we never used to have a Fair for Eid, we used to get a Fair you know, maybe once t not for Eid. And... now you get decorations and you get the f lovely, how the council do the decorations, before each festivli
+
+I think it's really nice and the Fair for Eid is brilliant en enjoy Eid, having pocket money and getting dressed up. It's ause we enjoy going visiting everybody, telling everybody "Eid y it more when they go in the Fair and go on rides. So I think ood idea. It's held at Spinney Hill Park. And there are usually of people.
+
+When we talk about riots, do you mean about skinheg I can remember to do with riots is, I think in 1973 or 1974 i that party?
+
+National Front?
+
+The National Front Party, that'smember I was quite young. There was a warning that they were co, they came to Highfields, and that's the only day I remember ed. I felt like going back to Bangladesh because it's like, ifming for you that's the end of it. You know? And why I can remee were told not to go out of the house by my mum, dad and my brer, he's two years older than me, he had gone to his friend's huld hear the people coming, everybody had to shut their windowserything and keep yourself locked in. We were told not to open the door, and we knew it was him, my brother, because we could , but he was so scared, and to see his face that scared, it mad because he never went back. I couldn't remember Brixton and ot of Highfields?
+
+I think Highfields has improved a lot, it's beuses have been done again, it's nice in summer and in spring th get better because a lot of our people enjoy living in Highfields, being with their friends and relatives around – and if any way the police or any community can make it a little safer, 't know what I can say for the future – I just hope it gets better. Because Highfields, from the years I've lived you know, there's been ups and downs, but I will miss it when I go, if I e, it's been nice.
+                </pattern>
+                <pattern>
+1951 – Worked as civil servant in India. Background; father & grandfather were farmers. Came to Coventry.
+
+1957 – Settled in Highfields. Bought a house for £450, it had twelve bedrooms which we rented some out.
+
+First impressions. A peaceful area. Few Asians in Leicester about 4050. Could get a home, preferred the area because of shopping facilities. In 1957 everything was on ration, eg. 6 eggs, 1 pound sausage. No corner shops. Go into town for shopping. Central area, Victorian type of home, and cheap that's why bought the property. Also a few other Asians lived nearby. Wherever there had been a house suitable I would have bought it. No Indian vegetables available. No yoghurt available.
+
+One grocery shop. Mr Patel used to come to your house and drop lentils etc off. Could telephone him.
+
+Yoghurt was essential so asked dairies to produce yoghurt.
+
+Weather -did not find it very hard. Used to snow every year.
+
+CO Nobody around Highfields to teach English. Many Asians could not speak English.
+
+Before me illiterate people used to work at nights, during day, do up flats and sell for a profit of about £50.
+
+I wanted to buy a car but nobody would sell me a car. I bought a van eventually for my market trade. Normally Asians were doing door to door selling ties, socks, etc.
+
+Rent -1 bed and about 3 in a bedroom put 3 beds into a bedroom. All houses were 3 storey.
+
+There were no baths then, only public baths. Had to pay 2 1/2 shillings for a bath. I had a bath in my house but only for me and not my tenant.
+
+Stayed with Wilson family for 15 years.
+
+I used to make my own Indian meals.
+
+Entertainment
+Not much entertainment.
+
+After a while somebody who was a Gujarati introduced Asian films. Would book a cinema and watch an Asian film. Everybody used to come otherwise used to go to pub, but I did not consume alcohol. Coach & Horses pub.
+
+Only a few people were racist. Majority were nice people and would talk and have a chat.
+
+We would go to Spinneyhill Park on Sundays and would play cards, etc. People were all working class, only three Asian homes.
+
+Police
+We had no problems with the police as we did not commit any crime.
+
+The English police force were better here than the Indian police. Would try and understand us.
+
+Later on in a school we rented a room on Bridge Road, on Sunday we started to pray.
+
+No places to worship in. Missed the fact that there was not a temple.
+
+Now there are 20-25,000 Sikhs. There are 4 main Gurdwaras (Sikh temples). There are more arguments now because people disagree, eg. beliefs etc. There is no unity.
+
+Weddings started after 1960s when families arrived, used pubs for weddings and halls.
+
+In World War II it was worse here than in India. There were only about 1520 cars. The most common was the Morris Minor or Austin cars. No prosperity. Factories were producing weapons etc for the war. The standard of living was very poor. No central heating or double glazing. Most people went into second-hand shops and bought clothes, etc.
+
+The Asian population was very low so there were no festivals celebrated in public such as Eid or Divali. We now celebrate at Spinneyhill Park.
+
+Worked sometimes 10 hours of overtime. Depended upon the factory.
+
+We did not face any racist attacks. There is no love anymore, no respect, it is a shame. People are only worried about making money and they are greedy. This is everywhere.
+
+Now Speed Ramps.
+
+Roads were narrower. More crime, drugs, etc and prostitution. English people left and so area became concentrated with Asians and Haiks. More Asian shops. The houses have become better. In every home there is a bath, heating. Nice decoration. More racist. People are more materialistic. Want more. The area has a bad reputation.
+
+I am not living in Highfields and I could not go back because I am used to better. Highfields is very run down now. Highfields is not a safe area. I would not advise anybody moving into Leicester to move to Highfields.
+                </pattern>
+                <pattern>
+I was born in1922 and lived at No 4 Abney Street for 11 years in the 1920s and 1930s.
+
+No 4 Abney Street was just across the road from the corner shop which is now the Laundrette. It used to be owned by Mr Growther who sold bread and cakes.
+
+The next shops going up the hill in Eggington Street where:-
+
+Mr Laird, a boot and shoe repairer, Miss Wandle, a greengrocer, Mr Cowney selling fish, Messrs Pittock and Gramp, a haberdasher and Mr Wilby, the chemist.
+
+On the opposite corner to Wilbys was the butcher. A little further down on the same side was Sturtons the grocers who ground and roasted coffee on the premises. The roaster was in the window with a grating to the street and the smell wafted down each day.
+
+On the corner of Abney Street opposite to Crowthers was Browns the grocers, a little further down was Wheatcroft the Pork Butchers who made their own pork pies on the premises.
+
+The baking was at the bottom of our garden, and here again, the smell of pork pies being cooked was delightful.
+
+I hope that this information will help you for "Highfields Remembered".
+                </pattern>
+                <pattern>
+ Roger, can you give me your full name, and your place of birth?
+
+My name is Roger John Cave and I was born in Leicester on 2nd March 1940.
+
+Do you know where you were born?
+
+Yes, I was actually born at Westcotes Nursing Home on the Narborough Road area of the city.
+
+Can you tell me a bit about your family background?
+
+Yes, my mother and father were both born in Highfields. Infact my father was born in Twycross Street just over the road from where we lived. After he got married (he was one of five brothers) the brothers gradually dispersed, one went to live in Carlisle, the others remained in Leicester. His mother and father carried on living in Twycross Street in Highfields until their deaths. My grandmother died in 1963 and my grandfather died in 1968. My mother's parents also lived in Highfields in Connaught Street. They lived there until they died. My grandfather died in 1955 and my grandmother died in 1973, I think she was about 89 when she died. Although my own mother died in 1946, (she was only 32) she died of Tuberculosis which was quite common in those days. From what my father has said she worked in an solicitor's office, but I believe it went bankrupt. She then worked in the hosiery trade until I was born. My father worked in a factory, I think he worked for a firm called Dalmers which made plasters for first aid treatment. During the war, he was in the Home Guard as he failed the medical to be taken into the regular army.
+
+How old were you when your mother died?
+
+I was six years old when she died.
+
+Can you remember anything about the funeral?
+
+No, I didn't attend the funeral, she died in Groby Road Hospital which in those days was used as a sanitarium. It was situated on the edge of town, I think it has just recently been closed down, but that was used for people with TB. I think it was built for that purpose really, but I can't remember too much about her, just the odd thing because it is such a long time ago and I was very young at the time.
+
+How many brothers and sisters do you have?
+
+I have just got one step-brother. My dad remarried in 1950 to an Irish lady and she already had a son, so there were just the two of us.
+
+Can you tell me a little bit about the house you stayed in?
+
+Well the house we lived in is still standing. It was originally a six roomed terraced house. In the early days it didn't have a bathroom, we had a bathroom put in but that wasn't until 1950. Before that we used to make do with a tin bath which would be brought out on a Friday night in front of the fire in the living room. I think everybody managed like that. The bath was about 6 foot in length which you'd keep in the backyard and then it would be brought out. It was a ritual having this bath, it was such a lot of trouble that probably that's the reason that it was only brought out once a week! But then grants for home improvements started coming in. I would think it would be about the 1950s when we had a bathroom and so were reduced to two bedrooms.
+
+Right, so you lived in a six bedroomed house, which is quite large for a terrace!
+
+No, a six roomed house, just the six rooms.
+
+Oh right!
+
+I remember during the war years there was a shelter in the yard. Everybody had one really in case of bombs, and also we used to keep our own chickens then because of the shortage of people working on farms. You had to be a bit self contained so we had our own chickens, and also father had his own allotment and that was on Victoria Park, an area that was turned into allotments
+
+In our street, I don't know as anybody owned a car, you'd perhaps see the odd vehicle but there were a lot more shops, or small shops than there is now. I can remember there was an off license just in a small area from Gopsall Street to Melbourne Road. There was also a newsagents, a fish and chip shop, a shoe repair shop, a haberdashery shop and a general grocery shop. All that was in quite a small area really, and every street would be the same like that. I think a lot of these shops have gone now, they have been turned into houses .
+
+I can even remember them delivering bread and milk, and there was a horse and cart delivery in those days. The school that I went to was St Peter's School in Gopsall Street and there was a Church of England School. That kept quite close to the Church more than what the Church of England schools do today. The Vicar and the Curate would come twice a week and we would have to say prayers in the mornings. The school housed quite a lot of children. I suppose there were perhaps up to four hundred pupils there, it was the through school from nursery through to junior, and there were two classes in each year so there were quite a lot of children in the school itself.
+
+Was there any punishment for naughty children should I say?
+
+Oh yes, they were very strict, and you could quite easily get the cane, you could be hit on the hand with it. The Headmaster then was very strict, and you didn't really get many disciplinary problems because of that. I think most parents excepted it as well really so yes, there was a lot of discipline there.
+
+What about the building, has it changed in any way?
+
+The outside structure has remained the same. It is used now as an annex to the new Sparkenhoe Primary School, so the outside of the old building is still the same although inside it has been altered. Rooms have been knocked through and the classrooms have been rearranged  there used to be some outside toilets there which all had but the basic structure is the same.
+
+After leaving St Peern School and that was called Dale School which was on Melbpposite the library. When leaving the junior school at elevenleft there after the second year and went to the grammar schoo School. At the secondary school, they used to have boxing. Wea's Church which was over the road. They used to have a boxing ink would be allowed these days, it would be classed as dangeroYes.
+
+So it was fairly safe for a young lad to walk through theI was born, I think it was November when the Germans dropped a ghfields. I was taken in a clothes basket when they had the airding had been shored up with extra timber so it would stand then the siren went off we went to the school to shelter from any , a bomb dropped only about a hundred yards away from the schoo and Sparkenhoe Street, then there was a string of bombs droppeeet and down Sparkenhoe Street. After the war, these areas wereay area on the bomb sites.
+
+It must have been terrifying for yon?
+
+Yes, I think the bombs were only dropped one night on Highfe sirens were situated on Victoria Park plus there were anti-aieicester and particularly for the Highfields there. Yes, the si high pitched wail you know which would be quite frightening.
+
+ the gas masks?
+
+Yes, we did. I vaguely remember those.
+
+Was thshelter in Gopsall Street?
+
+No, the only thing was the school, ll, it was like a corrugated iron sheet which was curved over tged into the ground, you would go down steps to it.
+
+Were theseng the war?
+
+Yes, just for use during the war. After the war wehe shelter up, but I think most houses in the town, had those rhoe School was called Highfields Infants and that was more of ading, it was built on the bomb site after the war. I believe it that until about 1986 when they built a new school there.
+
+Cant, how did you get about, shopping in the city centre?
+
+Well, o, I think there was a lot more walking done then, than there is We used the trams, and there was the buses as well.
+
+Where didon London Road which wasn't too far away from where we lived. Tou could catch a tram back up London Road. I think we used to gighfields Street and London Road so we only had to walk down Hie trams carried on to Stoneygate then out to where the Race Couu leisure activities when you were a child or a teenager?
+
+Whenies was playing football. I always used to play football. I rems on my mother's side in Connaught Street. My grandfather was a. One school would play against another school which doesn't seays, that seems to have died out.
+
+I was very keen on football,e in those days we didn't have a television set so a lot of ther playing with toy soldiers. That was another passion of mine piers. So you made your own entertainment really like that.
+
+Didfield Road, and there would be special children's matinees on a. There would be a special programme for children. We used to go to the Melbourne cinema as well at the bottom of Melbourne Rod, they were a good substitute for television really.
+
+I think my uncles were amateur radio broadcasters and they built their own television set out of a telly radiogram, like a big wooden  a radio and a record player. Well, they converted that, cut a piece out the front and put the television tube sticking through that, it was only a small nine inch. I remember clustering arund this at Christmas, it must have been 1948-1950, it wasn't tar.
+
+But the uncle who did it used to be in the RAF during the war, he used to work on radar and I think that gave him the ins I remember them building this set because I think we probably ght a set at home in 1953 or something like that, you know, or 1954 when it started to take off more commercially.
+
+Do you remall?
+
+Yes, we used to play on Spinney Hill Park quite often. Whl Park was there used to be a big pavilion that stood at the to be a bit colder than they are now, perhaps for a couple of wee so we used to go sledging.
+
+Yes. Was that park used in the warl for anything?
+
+I don't remember, there probably would be an acan't remember that. I can remember when I was a child, for bonsed to collect all the rubbish, and after the war we used to sttreet.
+
+Can you tell me about bonfire night?
+
+Yes, well bonfire at either end of the street even though they were perhaps dang crosses Melbourne Road could probably have as many as four bonnd just join in?
+
+Yes, they did then, I think there was probablu remember the 'bobby on the beat', or anything about the law aalking by, they used to carry a lot of authority and everybody andfather on my mother's side was in the Police Force from 1905ide his house saying that he was the police constable so he wouin any trouble they could knock on his door at any time.
+
+Do yoelds at all?
+
+Not really no. I don't think there was a lot of ce particularly after the war. I think everybody wanted to get back on their feet you know. There was more an atmosphere of alling together. I suppose there must have been burglaries but nothing to the extent that there is now, you know you could walk o and leave you doors unlocked and you could be quite safe. You could trust your neighbours. They would have probably lived there for years, there wasn't the movement of people in the area.  stayed put, they weren't buying and selling houses all the while so you knew the people in the locality.
+
+What about your locse on the corner of Highfields Street and St Peters Road more oom what the other firemen said it was quite frightening really, they had to adopt a certain procedure in case they got attackee fire. They had to be careful that they didn't drive into a 'se area and then use the local water supply, but by reversing ind quickly drive out and protect themselves like that. When theyre engine from the street hydrant.
+
+So when did you join the Fiwas this the local Brigade? Where was the fire station based?
+
+tation, then it was called Leicester City Fire Brigade, althoug Fire and Rescue Service. During the war, there was a National fter the war, I think probably about 1948, it reverted back to I joined in 1963 there was only two stations, Lancaster Road an was a very old station built about 1880. Lancaster Road was bu but then in 1964, another station opened at New Parks. In 1973losed down and a new station was built and opened in Hastings R when you worked for the Fire Brigade?
+
+Yes, the first wages I shoe trade, (there were a lot of shoe factories in Leicester atk at the age of sixteen.
+
+Did that seem enough for all your bast the time, yes, there wasn't cause to buy so much as there is  virtually nothing to £4.00 a week seemed quite a big jump rea clothes that I bought at that time, but as I say, expectations what they would be for youngsters now.
+
+So where was this fact Park Road in French Road, it was called George Durstons, it do a shoe factory. I worked at three different shoe factories bef fire service.
+
+So what made you decide to join the Fire Brigaddden I thought, "Now is the time ." When I was twenty three theut in hours from fifty-six hours a week (that was previous to 1ight hours a week, so they obviously needed extra men to make u-eight hour week, it's now a forty-two hour week which it has brs.
+
+I remember dealing with instances concerning Highfields. Os a freak thing really, it swept through Highfields and it tookrea here. I remember St Hilda's Church (which isn't the existinng) as was, but during this hurricane the roof came off in the and purposes, it looked as if nothing had happened to it, but oose so they had to pull the whole building down. I'm not sure wite extraordinary, yes, instead of blowing it off it just lifteed it back down on top.
+
+Were there any major fires in the areaof plenty of small house fires but I can't quite picture any fahere were obviously plenty of big fires during that time, it's e biggest thing was the hurricane that swept through this partike that?
+
+Floods? No, I can't remember floods, not in Highfieldd to cover Evington, Thurnby, areas like that. Evington used toea prone to flooding. I can remember attending a few road accidRoad, you know cars speeding. I can remember going to one or twyour shopping, was everything available?
+
+Yes, during the time or tinned food to the small shops, but also in every area there to us was in Chandos Street, just the other side of St Peters ass area, would be in the Co-op.
+
+I can always remember going te of the supermarkets in Leicester, it was mainly the Co-op or  a Co-op shop being in Chandos Street and there was also one ine Melbourne Road cinema as it was then. But there were also othlds not far away from here which have been knocked down now. I the bottom of Oxendon Street which is only a short street now.
+xendon Street, there was a Working Men's Club. It always used tWorking Men's Club, that was the main leisure centre for the aried out now really but that was quite a focal point for people. the area itself, about the buildings that were there but aren'thing that springs to mind are probably the houses. A lot of thnow are all the same. They are either used as flats or family here used for different types of people. The houses on Melbournes Street were ordinary six bedroom terraced houses. But the houRoad were of a better quality. I can remember playing as a chiliends. We went into their house and in the basement there was afferent rooms. That would obviously be the servants' quarters swere quite a few houses like that. I don't know if it could be e terraced houses (in the basements) in Twycross Street, the sin they worked at the houses on Melbourne Road
+
+I see, so would  class area, the people who lived here?
+
+Well, during the 1940sly working class although I think people who would be better of those living on Melbourne Road in those days. I think then theas it was before the war, so I would say mainly working class be middle class living on Melbourne Road. I think they went awaythink. Although the houses in the area varied in quality betweewn through Highfields towards the railway, I remember going int yard so it probably did for half a dozen houses! I think they  be demolished. I think that was when I first joined the fire bbably the early Sixties.
+
+Do you remember the local library?
+
+Yibrary was in Garendon Street, I think that still exists. Althory a lot I never used that one, I would use either the St Barna the early 1950s, or the main Central Lending Library.
+
+Did mantheir own transport, or did they use the local buses?
+
+Oh, they buses. Nobody started buying cars I suppose until the middle 1as all public transport or bicycles. During the early to middlet about the Health Centre. Where it is today, the St Peter's Hember what was there before?
+
+Yes, before St Peter's Health Cent just houses and shops that was just part of Highfields estate.ed to be a public house, I just can't quite think of the name, y mother's side first came to Leicester from Walsall near Birmire as a live-in barmaid at this public house, and that was abounk the pub was there until it was knocked down in the 1960s to s terraced houses.
+
+Was there quite a different community in thlish or Jewish community?
+
+Well I suppose a good indication of  a cross section of children in the area and I can remember there was one or two Jewish lads. So this would be going back to what, about 1951. I think there was one West Indian lad in the shink then in the next year there was an Indian lad but that was about all, you know there wasn't many at the school. Mind you, having said that, I know there is a Polish Church on Melbournelic School, a separate Catholic School. My stepmother was Irish. There was a few Irish Catholics came into the area and of course they had their own school, Sacred Heart on Mere Road. These got the Irish people and then probably the Polish people arrivndians and then Indian people. When I went to Dale in 1951 it wu had a fairly happy childhood?
+
+Well, reasonably I suppose. I with my mother dying, that made it unhappy you know. I mean I me she died. I think that made a difference to and to my educatits, we would play out more in the streets. I suppose because thuld play together more.
+
+I can remember playing football in thef trouble, you would get the odd fight, that's just natural, buo gang fights or anything like that. It was just playing togethhen you got to the age of fifteen they would go to work anyway.s would be taken up with that. I don't remember there being manhink you would probably be a bit of a problem child to be unempe factories really, so it was quite peaceful in the area.
+
+I mepare you know you just had adequate for your needs that time, Ir any spectacular buildings that were knocked down to provide fere just these poor terraced houses really, the worst of the teetter quality terraced houses are standing over the side of St er class area of Leicester then in those days. The only other thing I used to do as a child was to go to Melbourne Hall Churchts were married. Melbourne Hall was an Evangelical Free Church r's Church.
+
+Can you remember anything about the Carnival?
+
+The Carnival. I don't know when that started. Yes, because I moved out of Highfields in 1963 and then I got married in 1964 so I'm not too sure. I wasn't really around to see when that actuallt that really.
+
+Is there anything else you would like to tell mI can't think of anything else off hand really.
+
+Well, thank yoI hope it has added something to it !
+
+I'm sure it has and I thvery helpful, thank you Roger. 
+                </pattern>
+            </partition>
+            
+            <partition name="caption" />
+
+            <partition name="control">
+                <pattern>
+                    Data has been added
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

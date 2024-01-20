@@ -1,0 +1,61 @@
+<rule name="Compile Possible Notes">
+    <precondition>
+        <!-- Check that we can make a decision -->
+        <precondition>
+            <request type="get">
+                <partition name="determinatorControl">
+                    <pattern>
+                        Can decide for note ?index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="compiledOptions">
+                    <pattern>
+                        Note ~index options are ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="add">
+                <partition name="compiledOptions">
+                    <pattern>
+                        Note ~index options are
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="get">
+                <partition name="options">
+                    <pattern>
+                        Note ~index option ?optionIndex is ?note
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="get">
+            <partition name="compiledOptions">
+                <pattern>
+                    Note ~index options ??currentOptions
+                </pattern>
+            </partition>
+        </request>
+        <request type="replace">
+            <partition name="compiledOptions">
+                <pattern>
+                    Note ~index options ~currentOptions
+                </pattern>
+                <pattern>
+                    Note ~index options ~currentOptions ~note
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

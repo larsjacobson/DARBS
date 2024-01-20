@@ -1,0 +1,29 @@
+<agent name="Wildcard" type="rule-based">
+    <precondition type="not">
+        <request type="present">
+            <partition name="control">
+                <pattern>
+                    Wildcard agent is fired
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <rule>
+        add_data.drf
+    </rule>
+    <rule>
+        move_data.drf
+    </rule>
+
+    <action>
+        <request type="add">
+            <partition name="control">
+                <pattern>
+                    Wildcard agent is fired
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</agent>
+    

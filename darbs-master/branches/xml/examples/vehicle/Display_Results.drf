@@ -1,0 +1,38 @@
+<rule name="Display Results">
+    <precondition>
+        <request type="get">
+            <partition name="vehicle">
+                <pattern>
+            		Vehicle ?nID is a ?sVehicle
+                </pattern>
+            </partition>
+            <partition name="control">
+                <pattern>
+                    Display vehicle data
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="delete">
+            <partition name="control">
+                <pattern>
+                    Display vehicle data
+                </pattern>
+            </partition>
+        </request>
+
+        <request type="report">
+            <pattern>
+                Vehicle ~nID is a ~sVehicle
+            </pattern>
+        </request>
+
+        <request type="report">
+            <pattern>
+                Display Results fired because a ~sVehicle has been identified
+            </pattern>
+        </request>
+    </action>
+</rule>

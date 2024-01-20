@@ -1,0 +1,25 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="rectangleRegister" >Log-in</div>
+
+<div class="login">
+
+  <div class="col-sm-8 offset-sm-2 mt-2" *ngIf="!loading">
+    <form [formGroup]="signupForm">
+      <div class="form-group">
+        <label for="email"></label>
+        <input type="username" id="username" formControlName="username" class="form-control" placeholder="Username">
+      </div>
+      <div class="form-group email">
+        <label for="email"></label>
+        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email Address">
+      </div>
+      <div class="form-group password">
+        <label for="password"></label>
+        <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password">
+      </div>
+      <button class="btn btn-success" (click)="onSignup()" [disabled]="signupForm.invalid" style="width: 150%;">Sign up</button>
+    </form>
+    <p>{{ errorMessage }}</p>
+  </div>
+
+</div>

@@ -1,0 +1,33 @@
+
+.single-agent-info {
+  margin-left: 5%;
+  position: relative;
+  float: left;
+  width: 40%;
+  margin-bottom: 10%;
+}
+
+.agent-box{
+  position: relative;
+  display: inline-block;
+  margin-left: 4%;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 80%;
+  width: 70%;
+  float: center;
+}
+
+.backbutton{
+  margin-left: 67.5%;
+  width: 8%;
+  height: 10%;
+  margin-top: 0.7%;
+  background: #008FFF;
+  color: white;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+.backbutton :hover{
+  background-color: skyblue;
+}

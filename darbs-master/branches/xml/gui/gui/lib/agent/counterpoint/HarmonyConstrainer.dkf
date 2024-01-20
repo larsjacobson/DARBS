@@ -1,0 +1,45 @@
+<!--
+Harmony constrainer - Uses analysis of the harmonic relationship between the
+cantus firmus and the counterpoint options to remove inharmonic options
+-->
+<agent name="Harmony Constrainer" type="rule-based">
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="harmonyControl">
+                    <pattern>
+                        Harmony constraint complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="present">
+                <partition name="harmonyControl">
+                    <pattern>
+                        Harmony analysis complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <rule>
+        AddConsonantIntervals.drf
+    </rule>
+    <rule>
+        IsHarmonic.drf
+    </rule>
+    <rule>
+        FinishHarmonyConstraint.drf
+    </rule>
+</agent>

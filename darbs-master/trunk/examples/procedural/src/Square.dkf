@@ -1,0 +1,24 @@
+/* max file size is 64K */
+KS Square
+	
+	KS_TYPE procedural_KS
+
+	INFERENCE_MODE MI_Forwardchain
+
+	FIRABILITY_FLAG true
+
+	IF
+	[
+		[not_on_partition [Square is fired] ControlChars]
+	]
+
+	THEN
+	[
+		[run_algorithm[libsquare.so square[2.34] result]]
+		AND
+		[add [Square is fired] ControlChars]
+		AND
+		[report [Square of 2.34 is ~result]]
+	]
+
+END
