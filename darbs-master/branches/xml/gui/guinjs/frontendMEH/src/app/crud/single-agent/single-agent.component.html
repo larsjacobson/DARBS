@@ -1,0 +1,14 @@
+
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div *ngIf="!loading" class="box">
+  <button class="backbutton" (click)="onGoBack()"><< Back</button>
+  <div class="single-agent-pane">
+    <img [src]="agent?.imageUrl" alt="">
+    <div class="single-agent-info">
+      <h1>{{ agent?.title }}</h1>
+      <p>{{ agent?.description }}</p>
+      <button class="btn btn-success m-1" (click)="onModify()" [disabled]="part >= 3 && userId !== agent?.userId">Modify</button>
+      <button class="btn btn-danger m-1" (click)="onDelete()" [disabled]="part >= 3 && userId !== agent?.userId">Delete</button>
+    </div>
+  </div>
+</div>

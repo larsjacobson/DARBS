@@ -1,0 +1,41 @@
+<!--
+Harmony analyser - Analyses the harmonic relationship between the cantus firmus
+and the counterpoint options
+-->
+<agent name="Harmony Analyser" type="rule-based">
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="present">
+                <partition name="optionControl">
+                    <pattern>
+                        Option adding complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="harmonyControl">
+                    <pattern>
+                        Harmony analysis complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+    <rule>
+        AnalyseHarmony.drf
+    </rule>
+    <rule>
+        FinishHarmonyAnalysis.drf
+    </rule>
+</agent>

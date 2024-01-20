@@ -1,0 +1,46 @@
+<!--
+Note constrainer - Removes counterpoint options which do not fit into a
+diatonic scale
+-->
+<agent name="Note Constrainer" type="rule-based">
+    <!-- Run if we have a note which hasn't been constrained -->
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="present">
+                <partition name="optionControl">
+                    <pattern>
+                        Option adding complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="noteControl">
+                    <pattern>
+                        Note constraint complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <rule>
+        AddDiatonicNotes.drf
+    </rule>
+    <rule>
+        IsDiatonic.drf
+    </rule>
+    <rule>
+        FinishNoteConstraint.drf
+    </rule>
+</agent>

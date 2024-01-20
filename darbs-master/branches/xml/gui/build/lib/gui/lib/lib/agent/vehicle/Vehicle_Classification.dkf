@@ -1,0 +1,66 @@
+<agent name="Vehicle Classification" type="rule-based">
+    <precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="control">
+                    <pattern>
+                        Vehicle Classification is fired
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+
+        <precondition type="not">
+            <request type="present">
+                <partition name="control">
+                    <pattern>
+                        InitData is fired
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <rule>
+        Init_Data.drf
+    </rule>
+    <rule>
+        Read_Data.drf
+    </rule>
+    <rule>
+        Vehicle_Bicycle.drf
+    </rule>
+    <rule>
+        Vehicle_Motorcycle.drf
+    </rule>
+    <rule>
+        Vehicle_Car.drf
+    </rule>
+    <rule>
+        Vehicle_Van.drf
+    </rule>
+    <rule>
+        Vehicle_Lorry.drf
+    </rule>
+    <rule>
+        Vehicle_Bus.drf
+    </rule>
+    <rule>
+        Read_Check_Continue.drf
+    </rule>
+    <rule>
+        Read_Check_Stop.drf
+    </rule>
+    <rule>
+        Display_Results.drf
+    </rule>
+
+    <action>
+        <request type="report">
+            <pattern>
+                Vechicle Classification is fired
+            </pattern>
+        </request>
+    </action>
+</agent>
+

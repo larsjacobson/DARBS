@@ -1,0 +1,64 @@
+.single-biome-pane {
+
+}
+img {
+  position: relative;
+  width: 18%;
+  margin-left: 2%;
+  float: left;
+}
+
+.single-biome-info {
+  margin-left: 5%;
+  position: relative;
+  float: left;
+  width: 40%;
+  margin-bottom: 10%;
+}
+
+.agent-box{
+  position: relative;
+  display: inline-block;
+  margin-left: 4%;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 80%;
+  width: 70%;
+  float: center;
+}
+
+#outerstarbox{
+  display: inline-block;
+  background-color: white;
+  height: 68%;
+  width: 93%;
+  max-width: 93%;
+  position: absolute;
+  top: 3%;
+  left: 36%;
+  border-radius: 10px;
+}
+
+.innerstarbox{
+	display: block;
+	width: 100%;
+	height: 20%;
+	background-color: white;
+	border-color: white;
+	border-bottom-color: black;
+	border-style: solid;
+}
+
+.backbutton{
+  margin-left: 67.5%;
+  width: 8%;
+  height: 10%;
+  margin-top: 0.7%;
+  background: #008FFF;
+  color: white;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+.backbutton :hover{
+  background-color: skyblue;
+}

@@ -1,0 +1,76 @@
+body {
+    background-color: #fff;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+div.partition {
+    background-color: #babdb6;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+div.partition div div {
+    padding: 10px;
+}
+
+div.partition.active {
+    background-color: #a40000;
+}
+
+div.partition.hover {
+    background-color: #a40000;
+}
+
+div.ks {
+    background-color: #204a87;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+div.ks div div {
+    padding: 10px;
+}
+
+div.pattern {
+    background-color: #a40000;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+div.pattern div div {
+    padding: 10px;
+}
+
+div.pattern a {
+    color: #fff;
+}
+
+div.empty-notice {
+    background-color: #babdb6;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}

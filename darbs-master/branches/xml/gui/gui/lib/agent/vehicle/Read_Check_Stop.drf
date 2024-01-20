@@ -1,0 +1,41 @@
+<rule name="Read Check Stop">
+    <precondition>
+        <request type="present">
+  	        <partition name="control">
+                <pattern>
+                    Continue = n
+                </pattern>
+                <pattern>
+                    Vehicle Classification is fired
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="control">
+                <pattern>
+                    Read no more vehicle data
+                </pattern>
+                <pattern>
+                    Display vehicle data
+                </pattern>
+            </partition>
+        </request>
+        <!--
+        <request type="delete">
+            <partition name="control">
+                <pattern>
+                    Vehicle Classification is fired
+                </pattern>
+            </partition>
+        </request>
+        -->
+        <request type="report">
+            <pattern>
+                Read Check Stop fired because no more data is needed
+            </pattern>
+        </request>
+    </action>
+</rule>

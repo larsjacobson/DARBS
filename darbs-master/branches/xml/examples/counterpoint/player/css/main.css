@@ -1,0 +1,37 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+button {
+    background-color: #BABDB6;
+    color: #FFFFFF;
+/*    border: 2px solid #000000;*/
+    border: 0;
+    padding: 2px;
+}
+
+div#body {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -200px;
+    clear: left;
+    border: 5px solid #A40000;
+    padding: 50px;
+}
+
+div#body h1 {
+    text-align: center;
+}
+
+div#body div {
+    padding: 5px 0;
+    text-align: center;
+}

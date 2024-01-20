@@ -1,0 +1,24 @@
+<rule name="Finish harmony constraint">
+    <precondition>
+        <request type="get">
+            <partition name="harmonyControl">
+                <pattern>
+                    Harmony constraint started on note ?note
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="replace">
+            <partition name="harmonyControl">
+                <pattern>
+                    Harmony constraint started on note ~note
+                </pattern>
+                <pattern>
+                    Harmony constraint complete on note ~note
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

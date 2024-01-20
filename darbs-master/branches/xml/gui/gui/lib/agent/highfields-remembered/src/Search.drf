@@ -1,0 +1,73 @@
+<rule name="AddData">
+    <precondition type="and">
+        <precondition type="or">
+            <request type="present">
+                <partition name="control">
+                    <pattern>
+                        Have set initial best value
+                    </pattern>
+                </partition>
+            </request>
+            <precondition type="and">
+                <request type="run" library="libdarbsutil.dylib" function="setVariable" variable="best_value">
+                    <pattern>0</pattern>
+                </request>
+                <request type="add">
+                    <partition name="control">
+                        <pattern>
+                            Have set initial best value
+                        </pattern>
+                    </partition>
+                </request>
+            </precondition>
+        </precondition>
+        <precondition type="and">
+            <request type="get">
+                <partition name="caption">
+                    <pattern>
+                        ??caption
+                    </pattern>
+                </partition>
+            </request>
+
+            <request type="get">
+                <partition name="recollections">
+                    <pattern>
+                        ??recollection
+                    </pattern>
+                </partition>
+            </request>
+            <request type="run" library="libstringmetrics.dylib" function="commonterms" variable="result">
+                <pattern>
+                    ~caption | ~recollection
+                </pattern>
+            </request>
+
+            <request type="compare" operator=">">
+                <pattern>
+                    ~result
+                </pattern>
+                <pattern>
+                    ~best_value
+                </pattern>
+            </request>
+            <request type="run" library="libdarbsutil.dylib" function="setVariable" variable="best_value">
+                <pattern>~result</pattern>
+            </request>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="clear">
+            <partition name="best_match" />
+        </request>
+
+        <request type="add">
+            <partition name="best_match">
+                <pattern>
+                    ~recollection
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

@@ -1,0 +1,45 @@
+<rule name="Add Counterpoint Options">
+    <precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="options" />
+            </request>
+        </precondition>
+        <precondition>
+            <request type="get">
+                <partition name="octave">
+                    <pattern>
+                        ?toAdd
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ?value
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="run" library="libdarbsutil"
+                     function="calculateInteger" variable="option">
+                <pattern>
+                    ~value + ~toAdd
+                </pattern>
+            </request>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="options">
+                <pattern>
+                    Note ~index option ~toAdd is ~option 
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>

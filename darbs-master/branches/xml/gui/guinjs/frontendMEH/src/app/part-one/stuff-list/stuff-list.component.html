@@ -1,0 +1,38 @@
+<div id="first">
+  <div id="second"><span class="dot"><img class="userheadicon" src="img/user.png"></span>
+    <p class="username" style="color:white"> Guy whocantcycle </p>
+    <div id="second"><span class="dot"><img class="userheadicon" src="https://img.icons8.com/windows/32/000000/user-male-circle.png"></span>
+      <p class="username" style="color:white"> Guy whocantcycle </p>
+    </div>
+
+    <ul class="usernavlist">
+      <li class="usernavalign">
+        <a onclick="favouritesRedirect" href="#" style="text-decoration: none"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/like.png"/><p class="usernav"> Favourites</p></a>
+      </li>
+      <li class="usernavalign">
+        <a onclick="bookmarksRedirect" href="#" style="text-decoration: none"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/bookmark-ribbon.png"/><p class="usernav"> Bookmarks</p></a>
+      </li>
+      <li class="usernavalign">
+        <a onclick="photosRedirect" href="#" style="text-decoration: none"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/camera.png"/><p class="usernav"> Photos</p></a>
+      </li>
+      <li class="usernavalign">
+        <a onclick="placesRedirect" href="#" style="text-decoration: none"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/compass.png"/><p class="usernav"> Places</p></a>
+      </li>
+    </ul>
+  </div>
+
+
+<div id="suggestionbox">
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <p class="text-center" *ngIf="stuff.length <= 0 && !loading">No stuff for sale!</p>
+  <div class="stuff-list" *ngIf="stuff.length >= 0">
+    <div class="thing-pane" *ngFor="let thing of stuff" [ngClass]="{'open': thing._id === chosenId}" [ngStyle]="{'background-image': 'url(' + thing.imageUrl + ')'}" (click)="onProductClicked(thing._id)">
+      <div class="thing-info">
+        <h3>
+          {{ thing.title }}
+        </h3>
+        <h5>{{ thing.price / 100 | currency:'EUR' }}</h5>
+      </div>
+    </div>
+  </div>
+</div>

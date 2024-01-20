@@ -1,0 +1,80 @@
+<!--
+Determinator - Checks whether enough analysis has been carried out on a note,
+and if it has, chooses which note to select for the counterpoint.
+-->
+<agent name="Determinator" type="rule-based">
+    <!-- Run if all necessary rules have run on a note -->
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check we haven't already got a value for the note -->
+        <precondition type="not">
+            <request type="present">
+                <partition name="counterpoint">
+                    <pattern>
+                        Counterpoint note ~index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check whether the first rule has run -->
+        <precondition>
+            <request type="get">
+                <partition name="harmonyControl">
+                    <pattern>
+                        Harmony constraint complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check whether the second rule has run -->
+        <precondition>
+            <request type="present">
+                <partition name="noteControl">
+                    <pattern>
+                        Note constraint complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <!-- Check whether the third rule can run, and if it has run -->
+        <precondition type="or">
+            <precondition>
+                <request type="present">
+                    <partition name="melodyControl">
+                        <pattern>
+                            Melody constraint complete on note ~index
+                        </pattern>
+                    </partition>
+                </request>
+            </precondition>
+            <precondition>
+                <request type="compare" operator="==">
+                    <pattern>
+                        ~index
+                    </pattern>
+                    <pattern>
+                        1
+                    </pattern>
+                </request>
+            </precondition>
+        </precondition>
+    </precondition>
+
+    <rule>
+        CheckDeterminability.drf
+    </rule>
+    <rule>
+        CompileOptions.drf
+    </rule>
+    <rule>
+        ChooseOption.drf
+    </rule>
+</agent>

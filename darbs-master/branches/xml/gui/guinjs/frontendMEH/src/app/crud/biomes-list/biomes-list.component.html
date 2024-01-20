@@ -1,0 +1,23 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<p class="text-center" *ngIf="biomes.length <= 0 && !loading">No biomes!</p>
+<div class="biomes-list" *ngIf="biomes.length >= 0">
+  <div class="biome-box">
+    <div class="biome-pane"
+         *ngFor="let biome of biomes"
+         [ngClass]="{'open': biome._id === chosenId}"
+         [ngStyle]="{}"
+         (click)="onProductClicked(biome._id)">
+           <div class="biome-panel">
+             <img src="{{biome.imageUrl}}" style="">
+             <h1 style="padding-left: 5%; display:inline; color:white;">
+               {{ biome.title }}
+             </h1>
+             <div class="biome-info" style="padding-left: 18%;padding-top: 0%;">
+               <h2 style="padding-bottom: 15%; display:inline; color:grey; font-size:22px">
+                 {{ biome?.description }}
+               </h2>
+             </div>
+           </div>
+    </div>
+  </div>
+</div>

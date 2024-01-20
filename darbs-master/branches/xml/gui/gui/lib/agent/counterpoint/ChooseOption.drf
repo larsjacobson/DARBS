@@ -1,0 +1,46 @@
+<rule name="Choose Counterpoint Note">
+    <precondition>
+        <!-- Check that we can make a decision -->
+        <precondition>
+            <request type="get">
+                <partition name="compiledOptions">
+                    <pattern>
+                        Note ?index options are ??options
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="counterpoint">
+                    <pattern>
+                        Counterpoint note ~index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="run" library="libdarbsutil" function="choose"
+                     variable="choice">
+                <pattern>
+                    ~options
+                </pattern>
+            </request>
+        </precondition>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="counterpoint">
+                <pattern>
+                    Counterpoint note ~index is ~choice
+                </pattern>
+            </partition>
+        </request>
+        <request type="report">
+            <pattern>
+                Counterpoint note ~index is ~choice
+            </pattern>
+        </request>
+    </action>
+</rule>

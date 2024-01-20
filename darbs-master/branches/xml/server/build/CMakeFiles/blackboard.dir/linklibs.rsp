@@ -1,0 +1,1 @@
+-lws2_32 -lmswsock -Wl,-Bstatic -lboost_signals-mgw82-mt-x64-1_67 -lboost_system-mgw82-mt-x64-1_67 -lboost_regex -lboost_program_options -Wl,-Bdynamic -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

@@ -1,0 +1,45 @@
+<!--
+Melody constrainer - Uses the analysis of the counterpoint melody to remove
+unmelodic options
+-->
+<agent name="Melody Constrainer" type="rule-based">
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="melodyControl">
+                    <pattern>
+                        Melody constraint complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition>
+            <request type="present">
+                <partition name="melodyControl">
+                    <pattern>
+                        Melody analysis complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <rule>
+        AddMelodicIntervals.drf
+    </rule>
+    <rule>
+        IsMelodic.drf
+    </rule>
+    <rule>
+        FinishMelodyConstraint.drf
+    </rule>
+</agent>

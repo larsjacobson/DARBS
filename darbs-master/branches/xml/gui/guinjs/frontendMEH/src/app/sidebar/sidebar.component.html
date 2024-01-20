@@ -1,0 +1,27 @@
+<div class="sidebar">
+  <div id="first">
+      <div id="second"><span class="dot"><img class="userheadicon" src="https://img.icons8.com/windows/32/000000/user-male-circle.png"></span>
+        <p class="username" style="color:white"> Hi, Gennaro <!--{{ username }}--> </p>
+      </div>
+
+      <ul class="usernavlist">
+        <!--
+        <li class="usernavalign">
+          <a onclick="favouritesRedirect" href="#" style="text-decoration: none"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/like.png"/><p class="usernav"> Favourites</p></a>
+        </li>
+        -->
+        <li class="usernavalign">
+          <a onclick="bookmarksRedirect" href="#" style="text-decoration: none"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/bookmark-ribbon.png"/><p class="usernav"> Bookmarks</p></a>
+        </li>
+        <li class="usernavalign" *ngIf="!isAuth">
+          <a class="" routerLink="/report" routerLinkActive="active" style="text-decoration: none"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/compass.png"/><p class="usernav"> Report Faults</p></a>
+        </li>
+        <li class="usernavalign">
+          <a onclick="photosRedirect" href="#" style="text-decoration: none"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/camera.png"/><p class="usernav">Snapshots</p></a>
+        </li>
+        <li class="usernavalign" *ngIf="!isAuth">
+          <a class="" style="text-decoration: none" (click)="onLogout()"><img class="usernavicon" src="https://img.icons8.com/windows/32/000000/logout-rounded.png"/><p class="usernav"> Log Out</p></a>
+        </li>
+    </ul>
+  </div>
+</div>

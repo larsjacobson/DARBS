@@ -1,0 +1,49 @@
+<rule name="Vehicle Bicycle">
+    <precondition>
+        <request type="get">
+            <partition name="control">
+                <pattern>
+                    Vehicle Classification is fired
+                </pattern>
+            </partition>
+            <partition name="count">
+                <pattern>
+                    counter is ?count
+                </pattern>
+            </partition>
+        </request>
+        <request type="present">
+            <partition name="wheels">
+                <pattern>
+                    Vehicle ~count has 4 wheels
+                </pattern>
+            </partition>
+            <partition name="weights">
+                <pattern>
+                    Vehicle ~count is medium weight
+                </pattern>
+            </partition>
+            <partition name="carriers">
+                <pattern>
+                    Vehicle ~count is a passenger carrier
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="vehicle">
+                <pattern>
+                    Vehicle ~count is a car
+                </pattern>
+            </partition>
+        </request>
+
+        <request type="report">
+            <pattern>
+                Vehicle Car fired because vehicle ~count has 4 wheels, is medium weight and a passenger carrier
+            </pattern>
+        </request>
+    </action>
+</rule>

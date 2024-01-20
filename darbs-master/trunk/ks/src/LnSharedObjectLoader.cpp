@@ -1,0 +1,784 @@
+//////////////////////////////////////////////////////////////////////////
+//
+// File: LnSharedObjectLoader.cpp
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// $Id: LnSharedObjectLoader.cpp,v 1.1 2001/09/06 14:22:27 kcpw2 Exp $
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis: 
+//
+// Implementation file for LnSharedObjectLoader class.
+// 
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/22: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+
+// TODO:
+// Change to use templating, so we don't have a million different call
+// functions
+
+///////////////////////////// global includes ////////////////////////////
+#include <stdexcept>    // for exception handling
+#include <boost/function.hpp>
+#include <iostream>
+
+///////////////////////////// local includes /////////////////////////////
+#include "LnSharedObjectLoader.hpp"
+
+///////////////////////////// defines ////////////////////////////////////
+#define DEFAULT_FLAG       RTLD_NOW
+#define DEFAULT_DIR        "."
+#define LIB_NOT_FOUND      "could not load shared library!"
+#define FUNCTION_NOT_FOUND "could not find function in library!"
+#define OS_SEP             "/"
+
+///////////////////////////// global variables ///////////////////////////
+
+///////////////////////////// member functions ///////////////////////////
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::LnSharedObjectLoader()
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Constructor for LnSharedObjectLoader class.Sets the default directory
+// for shared libraries to the default value.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      LnSharedObjectLoader()
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    n/a
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: none
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+LnSharedObjectLoader::LnSharedObjectLoader()
+{
+    // set the default directory for libraries
+    setDefaultDir(DEFAULT_DIR);
+
+	// added by Patrick Wong on 26th August 2001.
+    // set handle to NULL initially.
+    m_handle = NULL;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::LnSharedObjectLoader()
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Constructor for LnSharedObjectLoader class. Sets default direktory
+// for shared libraries and links shared library "libName".
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      LnSharedObjectLoader( string libName)
+//
+// Where:      string libName: name of the library to be linked
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    n/a
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: none
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+LnSharedObjectLoader::LnSharedObjectLoader( std::string libName)
+{
+    // set the default directory for libraries
+    setDefaultDir(DEFAULT_DIR);
+
+    // load library with defaul mode
+    link( libName, DEFAULT_FLAG);
+	
+	// added by Patrick Wong on 26th August 2001.
+    // set handle to NULL initially.
+    m_handle = NULL;
+}
+   
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::LnSharedObjectLoader()
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Constructor for LnSharedObjectLoader class. Sets default directory for
+// the shared libraries and links labrary "libName" in the mode "flag".
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      LnSharedObjectLoader(string libName, int flag)
+//
+// Where:      string libName: name of library to be linked
+//             int flag:       either RTLD_LAZY or RTLD_NOW
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    n/a
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: none
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+LnSharedObjectLoader::LnSharedObjectLoader( std::string libName, int flag)
+{
+    // set the default directory for libraries
+    setDefaultDir(DEFAULT_DIR);
+
+    // load library and set mode
+    link( libName, flag);
+
+	// added by Patrick Wong on 26th August 2001.
+    // set handle to NULL initially.
+    m_handle = NULL;
+}
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::LnSharedObjectLoader()
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Constructor for LnSharedObjectLoader class. Sets the default directory
+// for shared libraries to "defualtDir" and links library "libName" in 
+// mode "flag"
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      LnSharedObjectLoader(string libName, int flag,
+//                                  string defaultDir)
+//
+// Where:      string libName: name of library to be linked
+//             int flag:       mode for linking, either RTLD_LAZY
+//                             or RTLD_NOW
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    n/a
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: none
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+LnSharedObjectLoader::LnSharedObjectLoader( std::string libName, int flag, std::string defaultDir)
+{
+    // set default directory for libraries
+    setDefaultDir( defaultDir);
+
+    // load library and set mode
+    link( libName, flag);
+
+	// added by Patrick Wong on 26th August 2001.
+    // set handle to NULL initially.
+    m_handle = NULL;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::~LnSharedObjectLoader()
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Destructor for the LnSharedObjectLoader class. Unlinks shared library,
+// if any.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      n/a    
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    n/a   
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: none
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+LnSharedObjectLoader::~LnSharedObjectLoader()
+{
+    // if shared library still loaded unload
+    unlink();
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::link( string libName )
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Links the shared library "libName" by calling the member function
+// link(string, int) with the default mode flag.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      link( string libName )
+//
+// Where:      string libName: name of library to be linked
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: none
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::link( std::string libName )
+{
+    // open library in default mode
+    link( libName, DEFAULT_FLAG);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::link( string libName, int flag )
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Links shared library "libName" in mode "flag".
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      link( string libName, int flag )
+//
+// Where:      string libName: name of shared library to be linked
+//             int flag:       link mode, either RTLD_LAZY or RTLD_NOW
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: stdexcept::std::runtime_error - if library not found
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::link( std::string libName, int flag )
+{
+    std::string name;
+
+    // load library "libName"
+    m_handle = new boost::extensions::shared_library(libName, true);
+
+    // if library not found
+    if(!m_handle->open())
+    {
+    delete m_handle;
+    m_handle = NULL;
+	// use default directory
+	name = m_defaultDir+OS_SEP;
+	name += libName;
+
+	// look in default directory for library
+	m_handle = new boost::extensions::shared_library(name, true);
+
+	// if library not found trow exception
+	if(!m_handle->open())
+	{
+	    throw std::runtime_error(LIB_NOT_FOUND);
+	}
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::unlink()
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Unlinks shared library (if any).
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      unlink()
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: none
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::unlink()
+{
+    // if a shared library is loaded
+    if( m_handle != NULL)
+    {
+	// unload library
+    delete m_handle;
+    m_handle = NULL;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::setDefaultDir( string directory )
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Sets the default directory for shared libraries to "directory".
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:      setDefaultDir( string directory )
+//
+// Where:      string directory: default derectory for shared libraries
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: none
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::setDefaultDir( std::string directory )
+{
+    // set the default library to "directory"
+    m_defaultDir = directory;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::call( string name, int& retval, int argc, void* argv)
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Calles function "name" in linked shared library.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:     call( string name, int& retval, int argc, void* argv)
+//
+// Where:     string name: name of symbol (function)
+//            int& retval: reference to return value
+//            int argc:    number of arguments in argument vector
+//            void* argv:  argument vector, has to be casted to type 
+//                         (void*), and must be casted back to whatever
+//                         type it was in function "name"
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: stdexcept::std::runtime_error - if symbol not found
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::call( std::string name, int& retval, int argc, void* argv)
+{
+    boost::function<int(int, void*)> function(m_handle->get<int, int, void*>(name));
+
+
+    // check for error
+    if(!function)
+    {  
+        // error occured
+        throw std::runtime_error(FUNCTION_NOT_FOUND);
+    }
+    retval = function( argc, argv);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::call( string name, float& retval, int argc, void* argv)
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Calles function "name" in linked shared library.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:     call( string name, float& retval, int argc, void* argv)
+//
+// Where:     string name:   name of symbol (function)
+//            float& retval: reference to return value
+//            int    argc:   number of arguments in argument vector
+//            void*  argv:   argument vector, has to be casted to type 
+//                           (void*), and must be casted back to whatever
+//                           type it was in function "name"
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: stdexcept::std::runtime_error - if symbol not found
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::call( std::string name, float& retval, int argc, void* argv )
+{
+    boost::function<float(int, void*)> function(m_handle->get<float, int, void*>(name));
+
+
+    // check for error
+    if(!function)
+    {
+        // error occured
+        throw std::runtime_error(FUNCTION_NOT_FOUND);
+    }
+    retval = function( argc, argv);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::call( string name, double& retval, int argc, void* argv)
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Calles function "name" in linked shared library.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:     call( string name, double& retval, int argc, void* argv)
+//
+// Where:     string  name:   name of symbol (function)
+//            double& retval: reference to return value
+//            int     argc:   number of arguments in argument vector
+//            void*   argv:   argument vector, has to be casted to type 
+//                            (void*), and must be casted back to whatever
+//                            type it was in function "name"
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: stdexcept::std::runtime_error - if symbol not found
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::call( std::string name, double& retval, int argc, void* argv )
+{
+    boost::function<double(int, void*)> function(m_handle->get<double, int, void*>(name));
+
+
+    // check for error
+    if(!function)
+    {
+        // error occured
+        throw std::runtime_error(FUNCTION_NOT_FOUND);
+    }
+    retval = function( argc, argv);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::call( string name, char* retval, int argc, void* argv)
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Calles function "name" in linked shared library.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:     call( string name, char* retval, int argc, void* argv)
+//
+// Where:     string name:   name of symbol (function)
+//            char*  retval: pointer to return value
+//            int    argc:   number of arguments in argument vector
+//            void*  argv:   argument vector, has to be casted to type 
+//                           (void*), and must be casted back to whatever
+//                           type it was in function "name"
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: stdexcept::std::runtime_error - if symbol not found
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::call( std::string name, char* retval, int argc, void* argv)
+{
+    boost::function<char*(int, void*)> function(m_handle->get<char*, int, void*>(name));
+
+
+    // check for error
+    if(!function)
+    {
+        // error occured
+        throw std::runtime_error(FUNCTION_NOT_FOUND);
+    }
+    retval = function( argc, argv);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::call( string name, string& retval, int argc, void* argv)
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Calles function "name" in linked shared library.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:     call( string name, string& retval, int argc, void* argv)
+//
+// Where:     string  name:   name of symbol (function)
+//            string& retval: reference to return value
+//            int     argc:   number of arguments in argument vector
+//            void*   argv:   argument vector, has to be casted to type 
+//                            (void*), and must be casted back to whatever
+//                            type it was in function "name"
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: stdexcept::std::runtime_error - if symbol not found
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::call( std::string name, std::string& retval, int argc, void* argv)
+{
+    boost::function<std::string(int, void*)> function(m_handle->get<std::string, int, void*>(name));
+
+
+    // check for error
+    if(!function)
+    {
+    // error occured
+    throw std::runtime_error(FUNCTION_NOT_FOUND);
+    }
+    retval = function(argc, argv);
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+// string LnSharedObjectLoader::call( string name, int argc, void* argv)
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:
+//
+// Calles function "name" in linked shared library.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:     string call( string name, int argc, void* argv)
+//
+// Where:     string  name:   name of symbol (function)
+//            int     argc:   number of arguments in argument vector
+//            void*   argv:   argument vector, has to be casted to type
+//                            (void*), and must be casted back to whatever
+//                            type it was in function "name"
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: stdexcept::std::runtime_error - if symbol not found
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2001/11/02: P. Wong: modified from Lars Nolle function
+//
+//////////////////////////////////////////////////////////////////////////
+std::string LnSharedObjectLoader::call( std::string name, int argc, void* argv)
+{
+		std::string retval;
+	
+    boost::function<std::string(int, void*)> function(m_handle->get<std::string, int, void*>(name));
+
+
+    // check for error
+    if(!function)
+    {
+    // error occured
+    throw std::runtime_error(FUNCTION_NOT_FOUND);
+    }
+    retval = function(argc, argv);	
+    return retval;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+// LnSharedObjectLoader::call( string name, string&  retval, string arg)
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Synopsis:  
+//
+// Calles function "name" in linked shared library.
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Usage:     call( string name, string&  retval, string arg)
+//
+// Where:     string  name:   name of symbol (function)
+//            string& retval: reference to return value
+//            string  arg:    argument for function to be called
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Returns:    void
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// Exceptions: stdexcept::std::runtime_error - if symbol not found
+//
+//////////////////////////////////////////////////////////////////////////
+//
+// History:
+//
+// 2000/06/27: Lars Nolle: initial implementation
+//
+//////////////////////////////////////////////////////////////////////////
+void LnSharedObjectLoader::call( std::string name, std::string&  retval, std::string arg)
+{
+    boost::function<std::string(std::string)> function(m_handle->get<std::string, std::string>(name));
+
+
+    // check for error
+    if(!function)
+    {
+	// error occured
+	throw std::runtime_error(FUNCTION_NOT_FOUND);
+    }
+    retval = function(arg);
+}

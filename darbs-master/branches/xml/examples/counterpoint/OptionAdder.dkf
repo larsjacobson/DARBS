@@ -1,0 +1,32 @@
+<!--
+Option Adder - Adds options for counterpoint notes
+-->
+<agent name="Option Adder" type="rule-based">
+    <precondition>
+        <precondition>
+            <request type="get">
+                <partition name="cantusFirmus">
+                    <pattern>
+                        Cantus Firmus value ?index is ==
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+        <precondition type="not">
+            <request type="present">
+                <partition name="optionControl">
+                    <pattern>
+                        Option adding complete on note ~index
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+    </precondition>
+
+    <rule>
+        AddOptions.drf
+    </rule>
+    <rule>
+        FinishOptionAdding.drf
+    </rule>
+</agent>

@@ -1,0 +1,41 @@
+<agent type="rule-based">
+    <precondition type="or">
+        <precondition type="not">
+            <request type="present">
+                <partition name="control">
+                    <pattern>
+                        Data has been added
+                    </pattern>
+                </partition>
+            </request>
+        </precondition>
+
+        <request type="present">
+            <partition name="caption">
+                <pattern>
+                    ??caption
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <rule>
+        AddData.drf
+    </rule>
+    <rule>
+        Search.drf
+    </rule>
+
+    <action>
+        <request type="clear">
+            <partition name="caption" />
+        </request>
+        <request type="delete">
+            <partition name="control">
+                <pattern>
+                    Have set initial best value
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</agent>

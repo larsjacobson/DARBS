@@ -1,0 +1,38 @@
+<rule name="Init_Data">
+    <precondition type="not">
+        <request type="present">
+            <partition name="control">
+                <pattern>
+                    Init Data is fired
+                </pattern>
+            </partition>
+        </request>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="count">
+                <pattern>
+                    counter is 0
+                </pattern>
+            </partition>
+        </request>
+        
+        <request type="add">
+            <partition name="control">
+                <pattern>
+                    Vehicle Classification is fired
+                </pattern>
+                <pattern>
+                    Init Data is fired
+                </pattern>
+            </partition>
+        </request>
+
+        <request type="report">
+            <pattern>
+    		    Init Data fired because no initial data
+            </pattern>
+        </request>
+    </action>
+</rule>

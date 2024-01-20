@@ -1,0 +1,54 @@
+<rule name="Add Interval Types">
+    <precondition type="not">
+        <request type="present">
+            <partition name="typesOfInterval" />
+        </request>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="typesOfInterval">
+                <pattern>
+                    Note distance of 0 is a Unison
+                </pattern>
+                <pattern>
+                    Note distance of 1 is a Minor Second
+                </pattern>
+                <pattern>
+                    Note distance of 2 is a Major Second
+                </pattern>
+                <pattern>
+                    Note distance of 3 is a Minor Third
+                </pattern>
+                <pattern>
+                    Note distance of 4 is a Major Third
+                </pattern>
+                <pattern>
+                    Note distance of 5 is a Perfect Fourth
+                </pattern>
+                <pattern>
+                    Note distance of 6 is a Tritone
+                </pattern>
+                <pattern>
+                    Note distance of 7 is a Perfect Fifth
+                </pattern>
+                <pattern>
+                    Note distance of 8 is a Minor Sixth
+                </pattern>
+                <pattern>
+                    Note distance of 9 is a Major Sixth
+                </pattern>
+                <pattern>
+                    Note distance of 10 is a Minor Seventh
+                </pattern>
+                <pattern>                    
+                    Note distance of 11 is a Major Seventh
+                </pattern>
+                <pattern>                    
+                    Note distance of 12 is a Octave
+                </pattern>
+
+            </partition>
+        </request>
+    </action>
+</rule>

@@ -1,0 +1,47 @@
+<rule name="Add Cantus Firmus">
+    <precondition type="not">
+        <request type="present">
+            <partition name="cantusFirmus" />
+        </request>
+    </precondition>
+
+    <action>
+        <request type="add">
+            <partition name="cantusFirmus">
+                <pattern>
+                    Cantus Firmus value 1 is 62
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 2 is 65
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 3 is 64
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 4 is 62
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 5 is 67
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 6 is 65
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 7 is 69
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 8 is 67
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 9 is 65
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 10 is 64
+                </pattern>
+                <pattern>
+                    Cantus Firmus value 11 is 62
+                </pattern>
+            </partition>
+        </request>
+    </action>
+</rule>
